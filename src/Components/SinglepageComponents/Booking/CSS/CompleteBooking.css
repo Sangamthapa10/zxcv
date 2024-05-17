@@ -1,0 +1,116 @@
+.btn_group {
+  display: grid;
+  grid-gap: 20px;
+}
+.complete_booking_form {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  padding: 20px;
+}
+.payment_options_btns {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+}
+.pay_now_options {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: start;
+  grid-gap: 12px;
+}
+.btn_group_pay_option {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  place-content: space-around;
+  grid-gap: 24px;
+  place-items: center;
+}
+.selected h1 {
+  color: red;
+  font-size: 28px;
+}
+.book_options__ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-bottom: 2px solid lightgray;
+  padding-bottom: 20px; */
+}
+.booking_form_details {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 3vh;
+}
+.selected_pay_option_btn {
+  border: 10px solid red;
+}
+.selected {
+  display: grid;
+  place-content: end;
+}
+.time_picker {
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.booking_detail_t_ {
+  display: grid;
+  grid-gap: 15px;
+}
+.property_cancellation_policy {
+  display: grid;
+  grid-gap: 20px;
+  background: #fff;
+  padding: 12px;
+}
+.top_ {
+  background: #fff;
+}
+@media (max-width: 600px) {
+  .sel_pay_title {
+    font-size: 1.2rem;
+    padding: 15px 0 0 15px;
+  }
+  .payment_options_btns {
+    background: #fff;
+    grid-gap: 0;
+  }
+  .modal_book_confirm {
+    background: #f3f3f3;
+  }
+  .booking_detail_t_ {
+    background: #fff;
+    padding: 15px;
+  }
+  .booking_book_price,
+  .booking_detail_t {
+    background: #fff;
+    padding: 25px;
+  }
+  .complete_booking_form,
+  .payment_options_btns {
+    padding: 0px;
+  }
+  .pay_now_options {
+    display: flex;
+  }
+  .text_res {
+    font-size: 10vw !important;
+  }
+  .booking_ {
+    border: none;
+    place-items: stretch;
+    place-content: stretch;
+    background: #f3f3f3;
+    padding: 0;
+  }
+  .btn_group_pay_option {
+    padding: 25px;
+  }
+}
+@media (max-width: 330px) {
+  .btn_group_pay_option {
+    grid-template-columns: 1fr;
+  }
+}

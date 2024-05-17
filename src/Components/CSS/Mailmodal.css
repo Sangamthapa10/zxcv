@@ -1,0 +1,38 @@
+.mail_body {
+  background-color: var(--white);
+  height: 60vh;
+  width: 70vw;
+  overflow-y: scroll;
+  animation: mover 1s;
+}
+
+@keyframes mover {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.section {
+  width: 100%;
+  flex: 0 0 100%;
+  padding: 10px 2em 2em 2em;
+  overflow: auto;
+  will-change: transform;
+  transform: translate(var(--x, 0%), var(--y, 0%));
+  transition: transform 300ms ease-out;
+  position: relative;
+  display: grid;
+  grid-gap: 12px;
+}
+.radio_container {
+  display: grid;
+  grid-gap: 10px;
+}
+.radio_grp {
+  display: grid;
+  grid-gap: 4px;
+}

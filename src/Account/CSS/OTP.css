@@ -1,0 +1,27 @@
+.otp_container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.userInput {
+  display: flex;
+  justify-content: center;
+}
+
+.otp_input {
+  outline: none;
+  font-size: 22px;
+  line-height: 26px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgb(176 176 176) 0px 0px 0px 1px;
+  padding: 12px 8px;
+  width: 65px;
+  height: 55px;
+
+  margin-bottom: 8px;
+  margin-right: 8px;
+  appearance: none;
+  text-align: center;
+}

@@ -1,0 +1,5 @@
+.facility_edit_container {
+  padding-top: 30px;
+  display: grid;
+  grid-gap: 12px;
+}

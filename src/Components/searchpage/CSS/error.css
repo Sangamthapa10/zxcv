@@ -1,0 +1,39 @@
+.error_body {
+  width: 100%;
+  height: 100%;
+}
+.error_page_content {
+  display: grid;
+  place-content: center;
+  place-items: center;
+
+  grid-gap: 15px;
+}
+.error_options {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.error_options .suggest {
+  display: grid;
+  grid-gap: 16px;
+}
+.suggest_section_error {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-gap: 16px;
+}
+.error_header {
+  font-size: 18vw;
+  line-height: 1em;
+  color: red;
+}
+
+.error_content p {
+  font-size: 1.2em;
+  color: #0d0d0d;
+}

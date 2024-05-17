@@ -1,0 +1,182 @@
+.image_all {
+  width: 294px;
+  height: 248px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.admin_tab_result {
+  width: 80%;
+}
+.admin_property_details,
+.admin_property_roomdetails {
+  display: grid;
+  grid-gap: 20px;
+}
+.facility_admin {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.facility_container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room_admin {
+}
+.admin_room_container {
+  display: grid;
+  grid-template-rows: 200px;
+}
+.admin_img {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.admin_img img {
+  width: 100%;
+  height: 100%;
+}
+.admin_property_roomdetails {
+  padding-bottom: 40px;
+}
+
+.admin_room_details {
+  display: grid;
+  grid-gap: 5px;
+}
+.roomadmin_name {
+  font-size: 26px;
+}
+
+.roomadmin_details {
+  font-size: 20px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.pdetail_table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.admin_property__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 15px;
+}
+.admin_property_map {
+  width: 100%;
+}
+.room_admin {
+  display: grid;
+  grid-gap: 20px;
+}
+/* room modal */
+.admin_amnety_body {
+  display: grid;
+  grid-gap: 12px;
+}
+.admin_property_room_body {
+  background-color: var(--white);
+  height: 90vh;
+  display: grid;
+  width: 90vw;
+  padding: 0 40px 40px 40px;
+  overflow-y: scroll;
+}
+.admin_property_room_modal {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: 16px;
+  place-content: center;
+}
+.admin_room_amneties_container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-bottom: 10px;
+  grid-gap: 1%;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.admin_room_amnety {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  background: var(--white);
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 4px #1597ff, 0 15px 15px -10px rgb(0 125 225 / 38%);
+  position: relative;
+  padding: 10px 0;
+}
+.red_shadow {
+  box-shadow: inset 0 0 0 4px red, 0 15px 15px -10px rgb(0 125 225 / 38%) !important;
+}
+.admin_room_amnety_icon {
+  font-size: 60px !important;
+  color: var(--lightgray);
+}
+.d_price_add {
+  display: grid;
+  grid-gap: 9px;
+  border-bottom: 1px solid var(--lightgray);
+}
+.available_switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--lightgray);
+}
+.change_meal_admin {
+  width: 50vw;
+  background: var(--white);
+  padding: 36px;
+}
+.change_meal_admin form {
+  display: grid;
+  grid-gap: 20px;
+}
+.change_meal_admin form span {
+  display: grid;
+  grid-gap: 12px;
+}
+@media (max-width: 768px) {
+  .change_meal_admin {
+    width: 70vw;
+  }
+}
+@media (max-width: 1200px) {
+  .admin_tab_container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .admin_property_body {
+    grid-template-columns: 100%;
+  }
+  .admin_tab_result {
+    width: 100%;
+  }
+  .admin_property__card {
+    width: 98%;
+  }
+  .admin_property_roomdetails {
+    grid-template-columns: 98%;
+  }
+  .admin_property_map {
+    width: 98%;
+  }
+}

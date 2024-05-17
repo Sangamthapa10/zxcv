@@ -1,0 +1,325 @@
+.search_page_address_container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 23px;
+  align-items: center;
+  justify-items: end;
+}
+.address_info_search p {
+  font-size: 1.4em;
+}
+.search_page_address {
+  display: flex;
+  align-items: center;
+}
+
+.detail h1 {
+  font-size: 1vw;
+}
+
+.search_body_map {
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+}
+
+.search_map {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.search__map {
+  height: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.search_hotel_card {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  /* grid-template-rows: 200px; */
+  grid-gap: 40px 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+
+.fav,
+.room_desc {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  justify-items: space-between;
+}
+
+.button {
+  max-width: 200px;
+}
+
+.final_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search_card_detail {
+  display: grid;
+  border-bottom: 1px solid var(--lightgray);
+  align-content: space-around;
+}
+
+.search_card_title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 24px;
+}
+.search_card_price {
+  font-size: 2rem;
+  color: var(--red);
+}
+.search_card_header {
+  display: grid;
+  grid-template-columns: auto max-content;
+  place-items: start;
+}
+
+.hotel_amneties {
+  display: grid;
+  align-items: center;
+  width: 80%;
+  grid-template-columns: auto auto auto auto;
+}
+
+.hotel_amneties p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.search_page_rating {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.price {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start;
+  place-content: start;
+}
+
+.search_card_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 96%;
+}
+
+.search_card_body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 7px;
+}
+
+.search_card_buttons {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 7%;
+  place-content: center;
+  place-items: center;
+}
+
+.map_search_card_buttons {
+  display: flex;
+  grid-template-columns: 45% 45%;
+  grid-gap: 10px;
+}
+
+.small_card_footer {
+  display: none;
+}
+
+.room_menu {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.room_option_big_screen {
+  display: grid;
+}
+
+.room_option__dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.menu_item {
+  display: flex;
+}
+
+.sinmap_btn {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: -70%;
+  background-color: var(--white);
+  width: 300px;
+  box-shadow: 0 8px 16px 0 var(--shadow);
+  z-index: 1;
+}
+
+.d {
+  display: block !important;
+}
+
+.dropdown-content .menu_item {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #d3d3d3;
+  justify-content: space-between;
+}
+
+.dp_img_roption,
+.menu_item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.dropdown-content .menu_item:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown_rname {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown_rname p {
+  margin-left: 5px;
+}
+
+.room_o_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightblue;
+  padding-bottom: 11px;
+}
+.sm_room_dropdown_container {
+  display: grid;
+  gap: 25px;
+  padding: 12px;
+}
+
+@media (max-width: 600px) {
+  .search_card_title {
+    font-size: 1.4rem;
+  }
+  .address_info_search p {
+    font-size: 1rem;
+  }
+  .sm_room_dropdown_container {
+    padding: 10px 0 20px 0;
+    gap: 16px;
+  }
+  .search_page_address {
+    display: none;
+  }
+
+  .hotel_amneties {
+    width: 100%;
+  }
+
+  .fav_label {
+    margin-right: 0 !important;
+  }
+
+  .search_card_header {
+    align-items: start;
+  }
+
+  .room_option_big_screen {
+    display: none;
+  }
+
+  .sinmap_btn {
+    display: none;
+  }
+
+  .search_hotel_card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .search_card_detail {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 100%;
+    grid-gap: 7px;
+    /* border-bottom: none; */
+    border-left: 1px solid var(--lightgray);
+    border-right: 1px solid var(--lightgray);
+    padding: 11px;
+  }
+
+  .search_card_footer {
+    display: none;
+  }
+
+  .small_card_footer {
+    display: grid;
+    grid-gap: 5px;
+  }
+
+  .small_card_room_name {
+    display: flex;
+    align-items: center;
+  }
+
+  .small_card_footer h1 {
+    font-size: 25px;
+    color: var(--red);
+  }
+}

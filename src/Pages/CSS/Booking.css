@@ -1,0 +1,354 @@
+.booking_edit_body {
+  width: 80vw;
+  height: 80vh;
+  background: var(--white);
+  overflow: auto;
+}
+.booked_options {
+  place-self: start;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 14px;
+}
+.big_datepicker .rdrCalendarWrapper {
+  box-shadow: none;
+  position: relative;
+}
+.changedatemodal_footer {
+  display: flex;
+  padding: 16px;
+  justify-content: flex-end;
+
+  background: var(--white);
+  border-top: 1px solid var(--lightgray);
+}
+
+.changedatemodal {
+  width: 700px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+}
+.big_datepicker .rdrMonth {
+  width: 50%;
+}
+.big_datepicker .rdrDayNumber {
+  font-size: 14px;
+}
+.big_datepicker .rdrMonthName {
+  font-size: 19px;
+}
+.big_datepicker .rdrDay {
+  height: 40px;
+}
+.big_datepicker {
+  display: grid;
+  grid-template-columns: 100%;
+  place-content: center;
+}
+.booking_rkey {
+  padding: 60px;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+}
+.bookcard_container {
+  display: grid;
+  grid-gap: 12px;
+}
+.booking_card_container {
+  display: grid;
+  grid-gap: 15px;
+  align-content: start;
+  grid-auto-columns: 85%;
+  justify-content: center;
+}
+.active_booking {
+  display: grid;
+  grid-template-columns: 74vw 20vw;
+  grid-gap: 13px;
+  padding-top: 15px;
+  place-content: center;
+}
+.booking_poster {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.booking_poster img {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+.book_details_desc {
+  /* display: grid !important;
+  place-content: center;
+  grid-template-columns: 1fr auto 1fr !important;
+  grid-gap: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 9px;
+  padding-right: 11px;
+}
+.book_finalp {
+  display: grid;
+  grid-gap: 5px;
+}
+.booking_card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30% 68%;
+  place-content: space-between;
+  border-radius: 5px;
+}
+.booking_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.book_container_ {
+  display: grid;
+  grid-gap: 20px;
+}
+.book_finalp h4 {
+  padding-left: 5px;
+}
+.booking_cardimg_container {
+  display: grid;
+  grid-template-rows: 100%;
+  padding: 16px;
+  max-height: 150px;
+}
+.booking_left {
+  background-color: var(--white);
+  position: relative;
+  display: grid;
+
+  padding-bottom: 11px;
+  border: 1px solid var(--lightgray);
+  border-radius: 23px;
+}
+.book_container_head {
+  display: grid;
+  grid-gap: 9px;
+}
+
+.book_tile_container {
+  background-color: var(--white);
+  position: relative;
+  display: grid;
+  grid-template-columns: 30% 68%;
+  place-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px var(--shadow);
+  grid-template-rows: 260px;
+}
+.book_time_details {
+  display: flex;
+  align-items: center;
+}
+.book_time_details p {
+  padding-left: 10px;
+}
+.aside_poster {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.main_poster {
+  padding-top: 16px;
+  border-right: 1px solid #e1e2e3;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-left: 1.5vw;
+  height: auto;
+  position: sticky;
+  bottom: 0;
+  display: inline-block;
+  min-height: calc(100vh - 80px);
+}
+
+.book_details_info h2 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #818189;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.book_details_info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+.book_details_info {
+  cursor: pointer;
+}
+.booking_m_details {
+  margin: 10px 15px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book_btn_tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.booking_card__text {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* place-content: center; */
+  grid-gap: 1%;
+}
+.edit_booking_card_container {
+  display: grid;
+  grid-template-columns: 90%;
+  /* grid-gap: 20px; */
+  background-color: var(--white);
+  place-content: center;
+  padding-top: 3vh;
+}
+.edit_booking_cards {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 200px;
+  place-content: center;
+  grid-gap: 3vh;
+  margin-top: 4vh;
+}
+.booking_meal_body {
+  padding: 20px 25px 0 25px;
+}
+.callhotelmodal {
+  padding: 4px;
+  background: var(--white);
+}
+@media (max-width: 768px) {
+  .booking_card_container {
+    grid-auto-columns: 96%;
+  }
+  .edit_booking_cards {
+    grid-auto-rows: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .edit_booking_cards button {
+    text-transform: none !important;
+  }
+  .active_booking {
+    grid-template-columns: 100vw;
+  }
+}
+@media (max-width: 600px) {
+  .changedatemodal_footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  .book_details_info {
+    overflow: hidden;
+  }
+  .booking_meal_body {
+    padding: 25px 0 0 0;
+  }
+  .booking_edit_body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .sm_date_modal_btm {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background: var(--white);
+    z-index: 1500;
+    right: 0;
+  }
+  .datepicker_info h4 {
+    font-size: 999px;
+    font-weight: bold;
+  }
+  .big_datepicker
+    .rdrMonths.rdrMonthsVertical
+    .rdrMonth:first-child
+    .rdrMonthName {
+    display: block;
+  }
+  .big_datepicker .rdrMonth {
+    width: 100%;
+  }
+  .edit_booking_card_container {
+    grid-template-columns: 100%;
+    grid-gap: 5px;
+  }
+
+  .changedatemodal {
+    width: 100vw;
+    background: var(--white);
+    border-radius: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
+  }
+  .edit_booking_cards {
+    grid-template-columns: 90%;
+  }
+  .bdetail_btn_grp {
+    display: grid;
+    grid-auto-columns: 87%;
+    place-content: center;
+    padding-top: 10px;
+    grid-gap: 16px;
+  }
+  .bdetail_down_btn_grp {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    place-content: space-between;
+  }
+  .smbook_details_desc {
+    display: grid !important;
+    place-content: space-around;
+    grid-template-columns: max-content max-content max-content;
+    grid-gap: 2px;
+  }
+  .booking_card_container {
+    grid-auto-columns: 95%;
+  }
+
+  .booking_card {
+    grid-template-columns: 25% 75%;
+  }
+  .aside_poster {
+    display: none;
+  }
+  .active_booking {
+    grid-template-columns: 100vw;
+  }
+  .book_time_details p {
+    padding-left: 0;
+  }
+  .book_details_desc {
+    display: grid !important;
+    place-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2px;
+    padding-bottom: 9px;
+  }
+  .booking_cardimg_container {
+    display: grid;
+    grid-template-rows: 80px;
+    padding: 16px;
+  }
+  .book_time_details {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}

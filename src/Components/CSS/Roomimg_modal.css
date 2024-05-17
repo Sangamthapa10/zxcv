@@ -1,0 +1,26 @@
+.img {
+  margin-left: 7vw;
+}
+.im {
+  width: 80vw;
+  height: 60vh;
+}
+.thumb {
+  height: 14vh;
+  opacity: 0.2;
+}
+.opac {
+  opacity: 1 !important;
+}
+.thumb:hover {
+  opacity: 1;
+}
+.modal_slider {
+  z-index: 100000000000;
+}
+.slide {
+  z-index: 10000;
+}
+.dots {
+  background-color: var(--btn);
+}

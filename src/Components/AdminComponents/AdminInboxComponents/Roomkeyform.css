@@ -1,0 +1,39 @@
+.room_key_form_body {
+  display: grid;
+  grid-template-rows: max-content auto;
+  height: 100%;
+}
+.room_key_form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+.booking_details_form {
+  padding: 40px;
+  background-color: lightblue;
+}
+.booking_details_modal_detail_container {
+  display: grid;
+  grid-gap: 16px;
+}
+.booking_details_form__ {
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-columns: 90%;
+  align-content: start;
+  margin-top: 2%;
+  justify-content: center;
+}
+.room_key_detail_box {
+  border: 1px solid white;
+  padding: 8px 16px;
+}
+.back_header_room_key {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  grid-gap: 10px;
+
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}

@@ -1,0 +1,37 @@
+.personal_info_body {
+}
+.personal_info_btn_tiles {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 95%;
+  place-content: center;
+}
+.close_personal__container {
+  display: flex;
+  align-items: center;
+}
+.personal_info_component {
+  border-bottom: 1px solid lightgray;
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.personal_info_headtag {
+  word-wrap: break-word;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.375em;
+  color: #484848;
+}
+.personal_info_main {
+  display: grid;
+}
+.personal_info_detail {
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.375em;
+  color: #484848;
+}

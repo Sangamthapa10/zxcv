@@ -1,0 +1,125 @@
+
+
+.searchresult
+{
+  display: -ms-grid;
+  display: grid;
+  place-content: start;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  -ms-grid-columns: 98%;
+  grid-template-columns: 98%;
+  grid-gap: 10px 10px;
+}
+
+.ordering_filter button
+{
+  border-radius: 30px;
+  text-transform: inherit;
+  margin: 5px;
+}
+
+.search_body
+{
+      display: grid;
+    grid-template-columns: 23vw 77vw;
+}
+
+.search_body_map
+{
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+}
+
+.search_map
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.search__map
+{
+  height: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.button
+{
+  max-width: 200px;
+}
+
+
+.price
+{
+  display: -ms-grid;
+  -ms-grid-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: start;
+  place-content: start;
+}
+
+.room_img_modal_slider
+{
+  z-index: 100000;
+}
+
+.d
+{
+  display: block!important;
+}
+
+@media (max-width:800px){
+  .search_body
+  {
+    display: grid;
+    grid-template-columns: 100vw;
+  }
+
+}
+
+@media (max-width:600px){
+  .ordering_filter button
+  {
+    border-radius: 14px;
+    text-transform: inherit;
+    margin: 5px;
+    white-space: nowrap;
+  }
+
+  .ordering_filter
+  {
+    display: flex;
+  }
+
+  .searchresult
+  {
+    display: -ms-grid;
+    display: grid;
+    place-content: start;
+    margin-top: 2vh;
+    margin-right: 1vw;
+    margin-left: 2vw;
+    -ms-grid-columns: 98%;
+    grid-template-columns: 98%;
+  }
+
+  .total_hotel
+  {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .ordering_filter
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

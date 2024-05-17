@@ -1,0 +1,70 @@
+.about_us_details {
+  color: #fff;
+  background-color: rgb(0, 0, 0, 0.6);
+  padding: 12px 14px;
+  width: 600px;
+  padding: 80px;
+  color: white;
+  position: absolute;
+  top: 10%;
+}
+.anime1,
+.anime2 {
+  animation: anime 2s;
+}
+.asd {
+ 
+  scroll-snap-type: y mandatory;
+}
+.about_us_details2 {
+  color: #fff;
+  background-color: rgb(0, 0, 0, 0.6);
+  padding: 12px 14px;
+  width: 600px;
+  padding: 80px;
+  color: white;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+}
+.aboutus_details_container {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+.about_us_details3 {
+  color: #fff;
+  background-color: rgb(0, 0, 0, 0.6);
+  padding: 12px 14px;
+  width: 50vw;
+  height: 100vh;
+  padding: 80px;
+  color: white;
+}
+.anime3 {
+  animation: animewidth 2s;
+}
+@keyframes animewidth {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 50vw;
+  }
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%) translateY(0%);
+  }
+}

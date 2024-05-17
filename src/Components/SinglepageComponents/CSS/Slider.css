@@ -1,0 +1,121 @@
+/* slider */
+.arrownexts,
+.arrowprevs {
+  position: absolute;
+  top: 41%;
+  color: var(--lightgray);
+  cursor: pointer;
+  z-index: 3;
+}
+.arrownexts {
+  right: 0;
+}
+.slide_count_indicator {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: absolute;
+  z-index: 1400;
+  font-size: 20px;
+  right: 20px;
+  bottom: 20px;
+}
+.slider {
+  width: 100vw;
+}
+.singlepage_slider_img__ {
+  width: 100vw;
+  height: 40vh;
+  object-fit: cover;
+}
+/* border radius */
+@media (min-width: 1000px) {
+  .lt1,
+  .image_gri:first-child img {
+    border-radius: 10px 0 0 10px;
+  }
+  .lt3,
+  .t3 img {
+    border-radius: 0 10px 10px 0;
+  }
+  .lt5,
+  .t5 img {
+    border-radius: 0 10px 10px 0;
+  }
+}
+/*ends*/
+
+.smsinglepage_slider_img__ {
+  width: 100vw;
+  height: 30vh;
+  object-fit: cover;
+}
+.singlepage_slider_img {
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover;
+}
+.s {
+  height: auto;
+}
+.image_container {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* Weather css */
+.weather__ {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.singlepage_image_sgroup {
+  position: relative;
+  display: grid;
+  height: 50vh;
+  grid-template-columns: 100%;
+  overflow: hidden;
+}
+.image_group_property {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-auto-rows: 50%;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  position: absolute;
+  inset: 0;
+}
+.image_group_property img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image_gri:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 800px) {
+  .singlepage_image_sgroup {
+    height: 40vh;
+  }
+  .image_group_property {
+    grid-auto-rows: 20vh;
+  }
+}
+@media (max-width: 600px) {
+  .image_group_property {
+    grid-auto-rows: 15vh;
+    grid-gap: 2px;
+  }
+}
+@media (max-width: 900px) {
+  .weather_main {
+    font-size: 17px;
+  }
+  .vdate {
+    font-size: 12px;
+    text-overflow: ellipsis;
+  }
+  .arrownext_weather {
+    position: absol;
+  }
+}

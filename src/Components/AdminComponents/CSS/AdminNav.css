@@ -1,0 +1,70 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 499;
+}
+.admin_nav {
+  display: grid;
+  grid-template-columns: 100%;
+  background-color: var(--white);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+.admin_nav_header {
+  display: flex;
+  width: 100%;
+  background-color: #1c45ef;
+  border-right: 5px solid var(--red);
+  align-items: center;
+  justify-content: center;
+}
+.admin_nav_right {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  height: 80px;
+}
+.contact {
+  display: grid;
+  place-self: end;
+  padding-left: 12px;
+}
+.search_bar input {
+  border: 1px solid var(--lightgray);
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: 0;
+  transition: width 0.35s ease-in-out;
+}
+.search_bar input:focus {
+  width: 20vw;
+}
+.admin_meal_body_main {
+  padding: 40px;
+  display: grid;
+  grid-gap: 20px;
+  align-content: start;
+}
+.adminnavlogo {
+  width: 30px;
+}
+@media (max-width: 600px) {
+  .adminnavlogo {
+    display: none;
+  }
+  .admin_search {
+    width: 100%;
+  }
+  .admin_nav_right {
+    justify-content: stretch;
+    height: auto;
+  }
+  .account_info {
+    display: none;
+  }
+  .admin_meal_body_main {
+    background: #f3f3f3;
+    padding: 0;
+    display: grid;
+    grid-gap: 15px;
+  }
+}

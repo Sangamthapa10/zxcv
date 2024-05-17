@@ -3,13 +3,45 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.8",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "khalti-checkout-web": "^2.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-instagram-login": "^1.4.0",
+    "react-lazy-load-image-component": "^1.6.0",
+    "react-list": "^0.8.17",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.2",
+    "react-window": "^1.8.10",
+    "recharts": "^2.12.6",
+    "sass": "^1.76.0",
+    "shallow-equal": "^3.1.0",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^7.1.0",
+    "workbox-broadcast-update": "^7.1.0",
+    "workbox-cacheable-response": "^7.1.0",
+    "workbox-core": "^7.1.0",
+    "workbox-expiration": "^7.1.0",
+    "workbox-google-analytics": "^7.1.0",
+    "workbox-navigation-preload": "^7.1.0",
+    "workbox-precaching": "^7.1.0",
+    "workbox-range-requests": "^7.1.0",
+    "workbox-routing": "^7.1.0",
+    "workbox-strategies": "^7.1.0",
+    "workbox-streams": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +66,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

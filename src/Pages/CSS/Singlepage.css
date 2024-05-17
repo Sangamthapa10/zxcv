@@ -1,0 +1,387 @@
+.singlepage_suggestion .slick-track {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.singlepage_suggestion {
+  background: var(--white);
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-columns: 100%;
+}
+
+.full_body_top {
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 25px;
+}
+
+.single_property_top_detail {
+  display: grid;
+  grid-gap: 14px;
+  padding: 20px 0 20px 0;
+}
+
+.title__ {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 3vh;
+}
+
+.full_body {
+  padding-left: 4vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 12px;
+}
+
+.singlepage_body {
+  display: grid;
+  grid-template-columns: 60% 35%;
+  margin-top: 2vh;
+  grid-gap: 5%;
+}
+
+.single_page_left {
+  max-width: 100%;
+}
+
+.single_page_header {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.single_page_headers {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.Single_page {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px 0;
+}
+
+.Single_page .singlepage_title {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+._rating_ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.singlepage_address {
+  font-size: 1.3em;
+  line-height: 1.5;
+  color: var(--black);
+  opacity: 0.54;
+
+  display: flex;
+
+  align-items: center;
+  margin: 0;
+  font-weight: 400;
+}
+
+.facility__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.facility__ {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 10px;
+  place-items: center;
+}
+
+.big_facility {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 28px;
+  cursor: pointer;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.room_option {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 200px;
+}
+
+.room_options {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.room_options__room {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.room_options_header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%;
+  place-items: space-around;
+}
+
+.mobile_facility {
+  display: none;
+}
+
+.small_showmore {
+  display: none;
+}
+
+.room_amneties {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  place-items: center;
+}
+
+.desc_desc {
+  text-overflow: ellipsis;
+}
+
+.slide_options {
+  display: none;
+}
+
+.singlepage_rating {
+  display: grid;
+  grid-template-columns: 100%;
+  background: var(--white);
+  grid-gap: 15px;
+  padding-top: 18px;
+}
+
+.mobile_bar {
+  display: none;
+}
+
+.sm_room_amneties {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto auto auto;
+}
+
+.sm_single_page_header {
+  display: grid;
+  background-color: var(--white);
+  box-shadow: 0 0 0 0 rgb(90 113 208 / 11%), 0 4px 16px 0 rgb(167 175 183 / 33%);
+  padding: 16px;
+}
+/* amnetymodal */
+.amnety_modal_container {
+  width: 90vw;
+  height: 85vh;
+  background: var(--white);
+  overflow: auto;
+  display: grid;
+  gap: 7px;
+  align-content: start;
+}
+
+@media (max-width: 900px) {
+  /* amnetymodalstart */
+  .amnety_modal_container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* amnetymodalend */
+  .full_body_top {
+    padding: 0;
+  }
+
+  .singlepage_suggestion h1 {
+    font-size: 1.5rem;
+  }
+
+  .mobile_bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 63px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--white);
+    z-index: 100;
+  }
+
+  .share_fav_mob {
+    display: flex;
+    align-items: center;
+  }
+
+  .booking_details {
+    padding: 0;
+  }
+
+  .headers {
+    display: none !important;
+  }
+
+  .full_body {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #f3f3f3;
+  }
+
+  .singlepage_body {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 0;
+    grid-gap: 0;
+  }
+
+  .Single_page {
+    grid-gap: 18px 0;
+  }
+
+  .detailed_desc,
+  .facility,
+  .map_,
+  .meals,
+  .single_page_header,
+  .weather {
+    background: var(--white);
+    box-shadow: 0 0 0 0 rgb(90 113 208 / 11%),
+      0 4px 16px 0 rgb(167 175 183 / 33%);
+    padding: 16px;
+  }
+  .room_selection {
+    padding: 10px 0px 10px 10px;
+    background: var(--white);
+    box-shadow: 0 0 0 0 rgb(90 113 208 / 11%),
+      0 4px 16px 0 rgb(167 175 183 / 33%);
+  }
+  .map_ {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .one_room_img {
+    border: 1px solid #979797;
+    padding: 4px;
+    height: 100%;
+    width: 100%;
+    max-height: 20vh;
+  }
+
+  .room_amneties {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 10px;
+    justify-items: stretch;
+  }
+
+  .slide_options {
+    display: grid !important;
+    grid-template-columns: 100%;
+  }
+
+  .room_option {
+    display: none;
+  }
+
+  .room_options {
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+  }
+
+  .big_facility {
+    display: none;
+  }
+
+  .mobile_facility {
+    display: block;
+  }
+
+  .big_show_more {
+    display: none;
+  }
+
+  .small_showmore {
+    display: block;
+  }
+
+  .img__ {
+    color: var(--shadow);
+    height: 100%;
+    width: 100%;
+    background: #f3f5f7;
+  }
+}
+
+.headers {
+  width: 100%;
+  background: radial-gradient(circle at 12.3% 19.3%, #5558da 0, #5fd1f9 100.2%);
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-gap: 2%;
+  place-items: center;
+}
+
+.headers h1 {
+  color: var(--white);
+  font-size: 2em;
+  padding: 5px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.p_policy_container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.list_policy {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-gap: 12px;
+}
+.spage_map_container {
+  display: grid;
+  grid-template-rows: 453px;
+}
+@media (max-width: 800px) {
+  .facility__body {
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    place-items: start;
+    grid-gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spage_map_container {
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-rows: 70vh;
+    place-content: center;
+    padding-top: 15px;
+  }
+}

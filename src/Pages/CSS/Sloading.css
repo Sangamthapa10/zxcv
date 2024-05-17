@@ -1,0 +1,17 @@
+.sloading_slider {
+  animation: e 1.5s ease-in-out 0.5s infinite;
+  background-color: rgba(0, 0, 0, 0.11);
+  display: grid;
+  place-items: center;
+}
+@keyframes e {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

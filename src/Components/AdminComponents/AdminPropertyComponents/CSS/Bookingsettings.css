@@ -1,0 +1,41 @@
+.not_available_dates {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  position: relative;
+}
+.nt_available {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.nt_datepicker {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 1000;
+}
+
+.nt_datepicker > button {
+  text-transform: inherit !important;
+  background-color: #ff7779;
+  color: white;
+  width: 100%;
+}
+.nt_datepicker > button:hover {
+  background-color: white;
+  color: #ff7779;
+}
+
+.btn_admin_add {
+     display: grid;
+    grid-template-rows: 108px;
+}
+.btn_admin_add_container {
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+}

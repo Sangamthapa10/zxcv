@@ -1,0 +1,62 @@
+.admin_login_body {
+  display: grid;
+  grid-template-columns: 40% 30%;
+  grid-auto-rows: calc(100vh - 60px);
+  justify-content: space-around;
+}
+.ad_login {
+  display: grid;
+  grid-template-rows: 30% auto;
+  align-content: space-evenly;
+  border-radius: 5px;
+  border: 1px solid var(--lightgray);
+}
+.admin_login_logo {
+  grid-template-rows: 100%;
+  display: grid;
+  grid-template-columns: 76%;
+  place-content: center;
+}
+.login_container {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  padding: 20px;
+  grid-gap: 28px;
+}
+.login_container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.login_container form {
+  display: grid;
+  grid-gap: 17px;
+}
+.login_container > p {
+  font-size: 12px;
+}
+.admin_svg_container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+@media (max-width: 800px) {
+  .ad_login {
+    grid-template-rows: 200px;
+  }
+  .admin_login_body {
+    grid-template-columns: 100%;
+    width: 80vw;
+    margin-top: 10vh;
+    grid-auto-rows: max-content;
+  }
+}
+@media (max-width: 500px) {
+  .ad_login {
+    grid-template-rows: 100px;
+  }
+  .login_container {
+    width: 100%;
+    grid-gap: 12px;
+  }
+}

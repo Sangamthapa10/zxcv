@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+.footer {
+  display: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mobile_footer {
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rdrMonthAndYearPickers {
+  display: none;
 }
-
-.App-header {
-  background-color: #282c34;
+.dayDisabledd {
+  background-color: var(--black);
+}
+.title_text {
+  font-size: 1.4rem;
+  color: var(--main-text);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+/* payment check laoder */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+.payment_check_body {
+  display: grid;
+  place-content: center;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  padding: 2px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+.dots {
+  display: inline-flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.payment_loading_anime .dot.z {
+  animation: scale 0.8s 0.2s forwards;
+}
+.payment_loading_anime .dot.f,
+.payment_loading_anime .dot.s {
+  animation: right 0.5s forwards;
+}
+.payment_loading_anime .dot.l {
+  animation: rightDown 0.4s 0.1s forwards linear, drop 2s 0.4s forwards linear;
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #212121;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 6px;
+}
+.dot.z {
+  position: absolute;
+  transform: scale(0);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+}
+.dot.f,
+.dot.s {
+  transform: translateX(0px);
+}
+@keyframes right {
+  100% {
+    transform: translateX(16px);
+  }
+}
+.dot.t {
+  background: transparent;
+}
+.dot .l {
+  margin-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes rightDown {
+  50% {
+    top: 4px;
+    left: 16px;
+  }
+  100% {
+    top: 12px;
+    left: 24px;
+  }
+}
+@keyframes drop {
+  100% {
+    transform: translate(70px, calc(35px + (100vh / 2)));
+  }
+}
+
+.loader {
+  padding: 2rem 4rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  border-style: solid;
+  border-width: 1vh;
+  font-size: 2rem;
+  --charge: "hsl(%s, 80%, 50%)" % var(--h, 0);
+  border-image: conic-gradient(
+      var(--charge) var(--a),
+      transparent calc(var(--a) + 0.5deg)
+    )
+    30;
+  animation: load 2s infinite ease-in-out;
+}
+
+.web_details {
+  display: grid;
+  grid-template-columns: 90vw;
+  place-content: center;
+  margin-top: 10vh;
+}
+.web_details_container {
+  border: 1px solid lightgray;
+  padding: 8px 12px;
+}
+.guest_policy_item {
+  display: grid;
+  grid-gap: 20px;
+}
+.policy_container {
+  display: grid;
+  grid-gap: 40px;
+}
+.guest_policy,
+.cancellation_policy {
+  display: grid;
+  grid-gap: 20px;
+  padding-bottom: 40px;
+}
+.guest_policy {
+  border-bottom: 1px solid lightgray;
+}
+/* suggest modal */
+.suggest_form {
+  display: grid;
+  grid-gap: 30px;
+  padding-top: 14px;
+  padding-bottom: 40px;
+}
+.suggest_form_cont {
+  display: grid;
+  grid-gap: 18px;
+}
+.suggest_form_details {
+  display: grid;
+  grid-gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--lightgray);
+}
+.suggest_form_modal {
+  background-color: var(--white);
+
+  padding: 60px;
+  display: grid;
+}
+.gallery_modal_head {
+  z-index: 500;
+}
+@media (max-width: 600px) {
+  .suggest_form_modal {
+    padding: 0 12px;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+  }
+}
+
+/*svg */
+.unathorized_art,
+.nobooking_art {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 70%;
+  grid-template-rows: 60%;
+  align-content: center;
+  place-items: center;
+  grid-gap: 14px;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .unathorized_art {
+    align-content: start;
+  }
+  .nobooking_art {
+    grid-template-columns: 96%;
+    grid-template-rows: 58%;
+    align-content: start;
   }
 }

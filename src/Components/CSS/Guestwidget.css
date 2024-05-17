@@ -1,0 +1,57 @@
+.guest_room_widget{
+ padding:6px 32px  ;
+   box-shadow:rgb(0 0 0 / 20%) 0px 6px 20px  ;
+border-radius:0 0 32px 32px;
+background:#fff;
+height: 100%;
+}
+.wg_body {
+
+}
+.guest_count,
+.room_count {
+    
+    color: rgb(34, 34, 34)  ;
+    padding-top: 16px  ;
+    padding-bottom: 16px  ;
+    padding-right: 4px  ;
+    display: flex  ;
+    align-items: center  ;
+    justify-content: space-between  ;
+    min-width: 250px  ;
+}
+.guest_count{
+    border-bottom: 1px solid rgb(221, 221, 221)  ;
+
+}
+.guest_count,
+.room_count
+ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wg_icon {
+  height: 32px  ;
+  width: 32px   ;
+  color:rgb(113, 113, 113)  ;
+  cursor:pointer;
+}
+.wg_header{
+      font-size: 16px  ;
+    line-height: 20px  ;
+    font-weight: 600  ;
+}
+.wg_value{
+}
+.widget_r{
+    display: inline-flex   ;
+    align-items: center   ;
+    justify-content: space-between   ;
+    width: 104px   ;
+    height: 32px   ;
+    color: rgb(34, 34, 34)   ;
+    font-weight: 400   ;
+    font-size: 16px   ;
+    line-height: 20px   ;
+}

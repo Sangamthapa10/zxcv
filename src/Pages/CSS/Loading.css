@@ -1,0 +1,121 @@
+.loadingcard {
+  width: 99%;
+  height: 100% !important;
+
+  display: grid;
+  place-items: center;
+}
+.lcard_img {
+  max-width: 20px !important;
+  max-height: 20px !important;
+  /* animation: loop 3s linear infinite; */
+}
+/* @keyframes loop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+} */
+
+.loading_group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2vh;
+  margin-top: 2.5vh;
+}
+/* Searchpageloading */
+.search_body_loading {
+  display: grid;
+  grid-template-columns: 30vw 70vw;
+  margin-top: 2.5vh;
+}
+.filters_loading {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  place-content: center;
+}
+.search_result_btn_loading {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  place-content: start;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.search_result_card_group {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px 0;
+  margin-top: 4.5vh;
+  margin-left: 1.5vw;
+  margin-right: 3.5vw;
+}
+.card_loading_search {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  grid-template-rows: 220px;
+  grid-gap: 8%;
+}
+.card_search {
+  height: 100%;
+  width: 100%;
+  background: var(--lightgray);
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+.card_right_search {
+  display: grid;
+  align-content: space-between;
+  height: 100%;
+  grid-template-columns: 100%;
+  grid-gap: 6px;
+}
+.sloading_title {
+  display: grid;
+  grid-template-columns: 70%;
+  grid-gap: 10px 0;
+}
+.card_right_search_facility {
+  display: grid;
+  grid-template-columns: 70%;
+}
+.card_right_down {
+  display: grid;
+  grid-template-columns: max-content auto;
+  place-content: space-between;
+}
+@media (max-width: 1200px) {
+  .search_body_loading {
+    grid-template-columns: 100vw;
+  }
+  .filters_loading {
+  }
+}
+@media (max-width: 800px) {
+  .search_result_btn_loading {
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .loaside {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .card_loading_search {
+    grid-template-rows: 180px;
+    grid-template-columns: 100%;
+  }
+  .loadingcard {
+    border-radius: 21px;
+  }
+  .l_card {
+    grid-template-columns: 98% !important;
+  }
+}

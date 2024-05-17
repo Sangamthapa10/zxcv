@@ -1,0 +1,127 @@
+.favourite_body {
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+}
+.fav_card {
+  display: grid;
+  position: relative;
+  margin: 20px;
+  border-bottom: 1px solid var(--lightgray);
+  cursor: pointer;
+  grid-template-columns: 47% 50%;
+  padding-bottom: 14px;
+}
+.fav_cards__price,
+.fav_cards__price span {
+  display: grid;
+  place-content: end;
+  place-items: end;
+}
+
+.fav_cards__price h2 {
+  color: var(--black);
+}
+.fav_card > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 180px;
+}
+
+.fav_card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.fav_card__heart {
+  position: absolute;
+  top: 4px;
+  right: 0px;
+}
+
+.fav_card__infoTop > h3 {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.fav_card__infoTop > p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.fav_card__infoBottom {
+  display: flex;
+  justify-content: space-between;
+}
+.fav_icon {
+  color: var(--black);
+}
+
+.fav_card__star {
+  color: var(--red);
+}
+
+.fav_card__stars {
+  display: flex;
+  align-items: flex-end;
+}
+
+.fav_cards__price > p {
+  text-align: right;
+}
+
+.favourite_body_rposter {
+  height: 80vh;
+}
+.price_fav {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-gap: 2px;
+}
+.fav_cards__price span p {
+  color: var(--gray);
+}
+.fav_card__stars p {
+  padding-left: 6px;
+}
+@media (max-width: 900px) {
+  .favourite_body {
+    grid-template-columns: 100vw;
+    place-content: center;
+  }
+  .favourite_body_rposter {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .favourite_body {
+    grid-template-columns: 96vw;
+  }
+  .apartment_icon {
+    width: calc(100vw - 80px) !important;
+  }
+  .fav_card {
+    grid-template-columns: 100%;
+    margin: 10px 0 0 0;
+    padding-bottom: 14px;
+  }
+  .fav_icon {
+    color: var(--white);
+  }
+
+  .fav_card__info {
+    display: grid;
+    grid-gap: 16px;
+    padding: 0;
+    justify-content: stretch;
+  }
+  .price_fav h2 {
+    font-size: 1.3rem;
+    color: #305050;
+  }
+}

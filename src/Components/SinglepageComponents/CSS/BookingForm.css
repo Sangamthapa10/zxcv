@@ -1,0 +1,8 @@
+.form input {
+  border: 1px solid var(--lightgray);
+  padding: 12px 16px;
+}
+.upper_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

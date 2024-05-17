@@ -1,0 +1,22 @@
+.admin_addform_room {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 100%;
+}
+.admin_addroom_form {
+  display: grid;
+  grid-gap: 20px;
+}
+.admin_property_room_body {
+  background-color: #fff;
+  height: 80vh;
+  width: 90vw;
+  padding: 0 40px 40px 40px;
+  overflow-y: scroll;
+}
+.admin_back_header_room {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  grid-gap: 10px;
+}

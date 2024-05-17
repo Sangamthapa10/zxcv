@@ -1,0 +1,71 @@
+.chart_container_body {
+  display: grid;
+  grid-template-columns: 100%;
+}
+.chart_container {
+  display: grid;
+  grid-template-columns: 58% 40%;
+  /* place-content: space-between; */
+  place-items: space-between;
+  grid-gap: 2%;
+}
+.admin_chart {
+  display: grid;
+  grid-template-columns: 96%;
+}
+.chart {
+  display: grid;
+  width: 100%;
+  min-width: 100%;
+  box-shadow: 0 0 0 0 rgb(90 113 208 / 11%), 0 4px 16px 0 rgb(167 175 183 / 33%);
+  border: solid 1px #dde4eb;
+  border-radius: 3px;
+  word-wrap: break-word;
+  background-color: var(--white);
+  background-clip: border-box;
+  padding: 20px;
+}
+
+.square {
+  height: 20px;
+  width: 20px;
+  padding-left: 5px;
+}
+.pie_down {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 15px 0 10px 0px;
+}
+.five {
+  background-color: #ff8042;
+}
+.four {
+  background-color: #ffbb28;
+}
+.three {
+  background-color: #00c49f;
+}
+.two {
+  background-color: #0088fe;
+}
+.ones {
+  background-color: green;
+}
+.mearn_chart {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-gap: 4px;
+}
+@media (max-width: 800px) {
+  .home_admin_dash {
+    margin-left: 0;
+  }
+  .admin_chart {
+    place-content: center;
+    margin-bottom: 4vh;
+  }
+  .chart_container {
+    grid-template-columns: 100%;
+  }
+}
