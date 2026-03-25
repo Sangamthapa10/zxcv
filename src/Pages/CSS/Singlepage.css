@@ -12,32 +12,42 @@
 .full_body_top {
   padding-left: 4vw;
   padding-right: 4vw;
-  padding-top: 25px;
+  padding-top: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .single_property_top_detail {
   display: grid;
-  grid-gap: 14px;
-  padding: 20px 0 20px 0;
+  grid-gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 }
 
 .title__ {
-  font-size: 2em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 3vh;
+  color: #1a1714;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
 }
 
 .full_body {
   padding-left: 4vw;
+  padding-right: 4vw;
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .singlepage_body {
   display: grid;
-  grid-template-columns: 60% 35%;
-  margin-top: 2vh;
+  grid-template-columns: 62% 33%;
+  margin-top: 30px;
   grid-gap: 5%;
 }
 
@@ -51,24 +61,32 @@
   grid-gap: 8px;
   align-items: center;
   cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: #8a8078;
+  font-size: 15px;
 }
 
 .single_page_headers {
-  display: grid;
-  grid-template-columns: max-content max-content max-content;
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 24px;
   align-items: center;
 }
 
 .Single_page {
   display: grid;
   grid-template-columns: 100%;
-  grid-gap: 20px 0;
+  grid-gap: 40px 0;
 }
 
 .Single_page .singlepage_title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
   font-weight: 700;
-  line-height: 1.25;
+  color: #1a1714;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 

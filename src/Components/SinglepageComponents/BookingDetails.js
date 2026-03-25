@@ -375,7 +375,17 @@ function BookingDetails({ roomselect }) {
                               variant="contained"
                               fullWidth
                               onClick={() => continuetobook()}
-                              style={{ backgroundColor: "#1ab64f", color: "white", textTransform: "none" }}
+                              style={{
+                                background: "linear-gradient(90deg, #ff4b2b, #ff416c)",
+                                color: "white",
+                                textTransform: "none",
+                                fontFamily: "'Outfit', sans-serif",
+                                fontWeight: 700,
+                                fontSize: "16px",
+                                borderRadius: "12px",
+                                padding: "12px 0",
+                                boxShadow: "0 8px 24px rgba(255, 75, 43, 0.3)",
+                              }}
                             >
                               Continue To Book
                             </Button>

@@ -7,7 +7,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 
-const PCities = ({ cities }) => {
+const PCities = ({ cities = [] }) => {
   const { checkin_date, setlat, setlon, checkout_date, roomcount, guestcount } =
     useGlobalContext();
   const history = useHistory();
@@ -67,7 +67,7 @@ const PCities = ({ cities }) => {
         <div className="fab_arrow">
           <ArrowForwardIosIcon style={{ fontSize: "20px", color: "red" }} />
         </div>
-        {currentSlide > cities.length - 3 ? "" : (
+        {currentSlide > (cities?.length || 0) - 3 ? "" : (
           <div style={{ top: "-47%" }} className="mob_arrow">
             <ArrowForwardIosIcon />
           </div>
@@ -85,7 +85,7 @@ const PCities = ({ cities }) => {
             <ArrowBackIosIcon style={{ fontSize: "20px", marginLeft: "9px", color: "red" }} />
           </div>
         ) : ""}
-        {currentSlide > cities.length - 3 ? (
+        {currentSlide > (cities?.length || 0) - 3 ? (
           <div style={{ top: "-47%" }} className="mob_arrow">
             <ArrowBackIosIcon />
           </div>
@@ -119,7 +119,7 @@ const PCities = ({ cities }) => {
       {/* Desktop grid */}
       {matches || (
         <div className="popular_city_body">
-          {cities.slice(0, 5).map((mapped, i) => (
+          {cities?.slice(0, 5).map((mapped, i) => (
             <div
               key={mapped.id}
               onClick={() => getLocations(mapped.city)}
@@ -145,7 +145,7 @@ const PCities = ({ cities }) => {
             </div>
             <h4 className="story_label">Nearby</h4>
           </div>
-          {cities.map((mapped) => (
+          {cities?.map((mapped) => (
             <div
               key={mapped.id}
               onClick={() => getLocation(mapped.city)}

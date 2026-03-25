@@ -49,7 +49,10 @@ const Category = () => {
   };
   return (
     <div className="cm_soon_body">
-      <h1>Coming Soon...</h1>
+      <div className="pcities_header">
+        <h3 className="pcities_title">Coming Soon</h3>
+        <p className="pcities_subtitle">Exciting new experiences on the way</p>
+      </div>
       <div>
         <Slider {...settings}>
           <div ref={one} className="category_poster">

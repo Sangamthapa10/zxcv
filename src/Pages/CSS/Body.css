@@ -1,15 +1,36 @@
-.home_page_body
-{
+/* ── Home Page Dashboard ── */
+.home_page_body {
   display: grid;
-  margin-top: 1vw;
-  grid-gap: 20px;
-  grid-template-columns: 96%;
+  grid-gap: 0;
+  grid-template-columns: 100%;
   place-content: center;
+  padding: 0 2vw;
 }
 
-.card_group
-{
+.card_group {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 16px;
   grid-template-columns: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── Section Headers ── */
+.recommend_text_home {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1714;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+@media (max-width: 600px) {
+  .home_page_body {
+    padding: 0 10px;
+  }
+
+  .recommend_text_home {
+    font-size: 1.4rem;
+  }
 }

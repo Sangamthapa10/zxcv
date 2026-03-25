@@ -1,120 +1,94 @@
+/* ── Login Modal – Liquid Glass ── */
+
 .login-container {
   display: grid;
   place-items: center;
   place-content: center;
 }
-.modal-container {
-  display: block;
-  border-radius: 7px;
-  text-align: center;
+
+/* The main container gets a vivid gradient so the glass has colour to refract */
+.log_modal_container {
   position: relative;
-  height: 90vh;
-  width: 80vw;
-  background-color: var(--white);
-}
-.login_form {
-  display: grid;
-  grid-gap: 30px 30px;
-  place-items: center;
-}
-.login_form_mob .signin_form {
-  background-color: transparent;
-}
-.login_details_sub_header {
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
-}
-.sign-button {
-  border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
-  color: var(--white);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 12px 45px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 80ms ease-in;
-}
-.sign-button:active {
-  transform: scale(0.95);
-}
-.sign-button:focus {
-  outline: 0;
-}
-.sign-button .ghost {
-  background-color: transparent;
-  border-color: var(--white);
+  width: 850px;
+  max-width: 95vw;
+  min-height: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  /* The gradient that gives the glass its colour */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f77062 70%, #fe5196 100%);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 80px rgba(255, 255, 255, 0.05);
 }
 
-.log_modal_container {
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%);
-  position: relative;
-  width: 90vw;
-  min-height: calc(100vh - 90px);
-}
+/* ── Form half — frosted white glass ── */
 .form-container {
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
+
 .sign-in-container {
   left: 0;
   width: 50%;
   z-index: 2;
+  /* The liquid glass effect */
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .log_modal_container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
+
 .sign-up-container {
   left: 0;
   width: 50%;
   opacity: 0;
   z-index: 1;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .pw-change {
   width: 50%;
   opacity: 0;
   z-index: 1;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
+
 .log_modal_container.resetpw_panel .pw-change {
   opacity: 1;
   z-index: 5;
   animation: resetanime 0.6s;
   display: grid;
 }
+
 @keyframes resetanime {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
 }
+
 .log_modal_container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
   animation: show 0.6s;
 }
+
 @keyframes show {
-  0%,
-  49.99% {
-    opacity: 0;
-    z-index: 1;
-  }
-  100%,
-  50% {
-    opacity: 1;
-    z-index: 5;
-  }
+  0%, 49.99% { opacity: 0; z-index: 1; }
+  50%, 100% { opacity: 1; z-index: 5; }
 }
+
+/* ── Overlay half — darker frosted glass ── */
 .overlay-container {
   position: absolute;
   top: 0;
@@ -125,16 +99,16 @@
   transition: transform 0.6s ease-in-out;
   z-index: 100;
 }
+
 .log_modal_container.right-panel-active .overlay-container {
   transform: translateX(-100%);
 }
+
 .overlay {
-  background: #ff416c;
-  background: var(--th_back);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
-  color: var(--white);
+  background: rgba(15, 12, 20, 0.45);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  color: #fff;
   position: relative;
   left: -100%;
   height: 100%;
@@ -142,6 +116,7 @@
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
+
 .log_modal_container.right-panel-active .overlay {
   transform: translateX(50%);
 }
@@ -152,7 +127,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 40px;
+  padding: 30px 40px;
   text-align: center;
   top: 0;
   height: 100%;
@@ -160,57 +135,111 @@
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
+
+.overlay-panel h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #fff;
+  margin: 0 0 14px 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.overlay-panel .login-p,
+.overlay-panel .login_details_sub_header {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 8px;
+}
+
+.login_details_sub_header {
+  font-size: 14px !important;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .overlay-left {
   transform: translateX(-20%);
 }
+
 .log_modal_container.right-panel-active .overlay-left {
   transform: translateX(0);
 }
+
 .overlay-right {
   right: 0;
   transform: translateX(0);
 }
+
 .log_modal_container.right-panel-active .overlay-right {
   transform: translateX(20%);
 }
+
 .login_overlay_login_bottom {
-  display: grid;
-  grid-gap: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 15px;
 }
-@media (max-width: 700px) {
-  .log_modal_container {
-    min-height: 600px;
-  }
+
+.login_overlay_login_bottom > span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
 }
-@media (max-width: 1024px) {
-  .log_modal_container {
-    width: 98vw;
-    min-height: 500px;
-  }
+
+/* ── Ghost glass button ── */
+.ghost-button {
+  padding: 11px 34px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-/* reset anime */
+
+.ghost-button:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Reset password ── */
 .log_modal_container.resetpw_panel .sign-in-container {
   transform: translateY(100%);
 }
+
 .reset-overlay {
   right: 0;
   animation: resetoverlayanime 0.6s;
 }
+
 @keyframes resetoverlayanime {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
 }
+
 .log_modal_container.resetpw_panel .overlay-right {
   transform: translateY(100%);
 }
 
-/* otp container */
+/* ── OTP ── */
 .otp_container_form {
   width: 100% !important;
   height: 100%;
@@ -218,34 +247,60 @@
   place-content: center;
   grid-gap: 19px;
 }
+
+/* ── Mobile ── */
 .login_form_mob {
   width: 100vw;
   height: 100vh;
-
-  background: linear-gradient(360deg, #e9fbcf 10%, #1d7d8e 360%);
-  overflow: scroll;
-
-  animation: mover 1s;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f77062 100%);
+  overflow-y: auto;
+  animation: mover 0.4s ease;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .sm_sign_form {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px 20px;
+  margin: 20px;
   display: grid;
   grid-gap: 14px;
+  width: calc(100% - 40px);
+  max-width: 400px;
 }
+
 .close_icon {
   position: fixed;
   right: 15px;
   top: 15px;
   font-size: 30px;
+  z-index: 10;
+  color: #fff;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 @keyframes mover {
-  0% {
-    opacity: 0;
-    transform: translateY(0px, 100%);
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .log_modal_container {
+    width: 96vw;
+    min-height: 480px;
   }
-  100% {
-    opacity: 1;
-    transform: none;
+}
+
+@media (max-width: 700px) {
+  .log_modal_container {
+    min-height: 550px;
   }
 }

@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap');
 
-.home_page_body {
-  display: grid;
-  margin-top: 1vw;
-  grid-gap: 20px;
-  grid-template-columns: 96%;
-  place-content: center;
-}
+
 
 .cm_card_container {
   display: grid;
@@ -22,11 +16,7 @@
   font-size: 16px;
 }
 
-.card_group {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 100%;
-}
+
 
 .card_img {
   width: 100%;

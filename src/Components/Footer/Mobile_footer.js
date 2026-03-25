@@ -12,13 +12,20 @@ import HomeIcon from "@mui/icons-material/Home";
 import { makeStyles } from '@mui/styles';
 const styles = makeStyles({
   root: {
-    color: "green",
-    "&$selected": {
-      color: "red",
+    color: "#8a8078 !important",
+    transition: "all 0.3s ease !important",
+    "& .MuiBottomNavigationAction-label": {
+      fontSize: "10px !important",
+      marginTop: "2px",
+      fontFamily: "'Outfit', sans-serif !important",
     },
-  },
-  selected: {
-    color: "red",
+    "&.Mui-selected": {
+      color: "#ff4d6d !important",
+      "& .MuiBottomNavigationAction-label": {
+        fontSize: "11px !important",
+        fontWeight: "600 !important",
+      },
+    },
   },
 });
 
@@ -85,47 +92,52 @@ const MobileFooter = () => {
           }}
           showLabels
           className="mobile_footer_container"
+          style={{ 
+            borderTop: '1px solid rgba(0,0,0,0.05)',
+            boxShadow: '0 -4px 12px rgba(0,0,0,0.08)',
+            height: '65px'
+          }}
         >
           <BottomNavigationAction
             label="Home"
-            icon={<HomeIcon />}
+            icon={<HomeIcon style={{ fontSize: '22px' }} />}
             value={"/"}
             component={Link}
             to={"/"}
-            classes={classes}
+            classes={{ root: classes.root }}
           />
           <BottomNavigationAction
-            icon={<SearchIcon />}
+            icon={<SearchIcon style={{ fontSize: '22px' }} />}
             value={"/idea"}
-            label="search"
+            label="Search"
             component={Link}
-            classes={classes}
             to={"/idea"}
+            classes={{ root: classes.root }}
           />
 
           <BottomNavigationAction
-            label="Favourites"
-            icon={<FavoriteBorderIcon />}
+            label="Wishlist"
+            icon={<FavoriteBorderIcon style={{ fontSize: '22px' }} />}
             value={"/favourite"}
-            classes={classes}
             component={Link}
             to={"/favourite"}
+            classes={{ root: classes.root }}
           />
           <BottomNavigationAction
-            label="Booking"
-            classes={classes}
-            icon={<WorkOutlineIcon />}
+            label="Bookings"
+            icon={<WorkOutlineIcon style={{ fontSize: '22px' }} />}
             value="/booking"
             component={Link}
             to={"/booking"}
+            classes={{ root: classes.root }}
           />
           <BottomNavigationAction
             label="Profile"
-            classes={classes}
-            icon={<PersonOutlineIcon />}
+            icon={<PersonOutlineIcon style={{ fontSize: '22px' }} />}
             value={"/profile"}
             component={Link}
             to={"/profile"}
+            classes={{ root: classes.root }}
           />
         </BottomNavigation>
       ) : null}

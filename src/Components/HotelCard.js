@@ -20,7 +20,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import StarIcon from "@mui/icons-material/Star";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-const HotelCard = ({ propertydata }) => {
+const HotelCard = ({ propertydata = [] }) => {
   const mob = useMediaQuery("(max-width:900px)");
   const {
     setlogin,
@@ -42,7 +42,7 @@ const HotelCard = ({ propertydata }) => {
             <ArrowForwardIosIcon style={{ fontSize: "16px", color: "#1a1714" }} />
           </Fab>
         </div>
-        {currentSlide > propertydata.length - 3 ? "" : (
+        {currentSlide > (propertydata?.length || 0) - 3 ? "" : (
           <div className="mob_arrow">
             <ArrowForwardIosIcon />
           </div>
@@ -62,7 +62,7 @@ const HotelCard = ({ propertydata }) => {
             </Fab>
           </div>
         ) : ""}
-        {currentSlide > propertydata.length - 3 ? (
+        {currentSlide > (propertydata?.length || 0) - 3 ? (
           <div className="mob_arrow">
             <ArrowBackIosIcon />
           </div>
@@ -114,7 +114,7 @@ const HotelCard = ({ propertydata }) => {
 
   return (
     <Slider {...settings}>
-      {propertydata.map((mapped) => {
+      {propertydata?.map((mapped) => {
         // Supports both API shape (room_option array) and dummy data (room object)
         const { id, Name, Address, liked, rating, avg_count } = mapped;
         const default_room = mapped.room_option

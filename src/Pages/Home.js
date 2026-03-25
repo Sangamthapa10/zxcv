@@ -370,7 +370,7 @@ function Home() {
         setloading(true);
         Customaxios.get("/api/home", { cancelToken: source.token })
           .then((res) => {
-            // setloading(false);
+            setloading(false);
             setpropertydata(res.data.a);
             setcpdata(res.data.b);
             setcities(res.data.c);
@@ -386,13 +386,14 @@ function Home() {
               setcpdata(dataq.b);
               setcities(dataq.c);
               sethomedata(dataq);
+              setloading(false);
             }
           });
       } else {
         setloading(false);
-        setpropertydata(homedata.a);
-        setcpdata(homedata.b);
-        setcities(homedata.c);
+        setpropertydata(homedata?.a || []);
+        setcpdata(homedata?.b || []);
+        setcities(homedata?.c || []);
       }
     };
     fetchdata();
@@ -410,12 +411,18 @@ function Home() {
             <PCities cities={cities} />
           </div>
           <div style={{ paddingTop: "30px" }} className="card_group">
-            <h4 className="recommend_text_home">Highest Rated Hotels</h4>
+            <div className="pcities_header">
+              <h3 className="pcities_title">Highest Rated Hotels</h3>
+              <p className="pcities_subtitle">Top picks loved by our guests</p>
+            </div>
             <HotelCard propertydata={propertydata} />
           </div>
 
           <div className="card_group">
-            <h4>Couple Friendly S.Rooms</h4>
+            <div className="pcities_header">
+              <h3 className="pcities_title">Couple Friendly S.Rooms</h3>
+              <p className="pcities_subtitle">Handpicked for romantic getaways</p>
+            </div>
 
             <HotelCard propertydata={cpdata} />
           </div>

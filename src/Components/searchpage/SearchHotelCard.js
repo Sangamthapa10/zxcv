@@ -19,7 +19,7 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import StarIcon from "@mui/icons-material/Star";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import ExploreIcon from "@mui/icons-material/Explore";
-function SearchHotelCard({ realdata }) {
+function SearchHotelCard({ realdata = [] }) {
   const { setselectroom, setlogin } = useGlobalContext();
   const mob = useMediaQuery("(max-width:900px)");
   const smmob = useMediaQuery("(max-width:600px)");
@@ -182,7 +182,7 @@ function SearchHotelCard({ realdata }) {
         id="theElementId"
         style={{ height: search_loading && "50px" }}
       >
-        {realdata.map((mapped) => {
+        {realdata?.map((mapped) => {
           const {
             id,
             Name,
@@ -197,7 +197,7 @@ function SearchHotelCard({ realdata }) {
             amneties,
           } = mapped;
           var one = amneties.data;
-          let default_room = room_option.filter(
+          let default_room = (room_option || []).filter(
             (swine) => swine.default_room === "d"
           );
           return (
@@ -303,7 +303,7 @@ function SearchHotelCard({ realdata }) {
                     </div>
                     <div className="search_card_center">
                       <div className="hotel_amneties">
-                        {one.map((amnes, i) => {
+                        {(one || []).map((amnes, i) => {
                           return (
                             <span
                               style={{
@@ -382,7 +382,7 @@ function SearchHotelCard({ realdata }) {
                                     : "dropdown-content"
                                 }`}
                               >
-                                {room_option.map((maps, i) => {
+                                {room_option?.map((maps, i) => {
                                   return (
                                     <span
                                       onClick={(e) =>
@@ -515,7 +515,7 @@ function SearchHotelCard({ realdata }) {
                   <h6 style={{ fontWeight: "bold" }}>
                     {room_option.length} Room options to choose from
                   </h6>
-                  {room_option.map((maps, i) => {
+                  {room_option?.map((maps, i) => {
                     return (
                       <span
                         key={i + 1}

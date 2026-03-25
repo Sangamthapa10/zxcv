@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
@@ -7,15 +7,17 @@ import reportWebVitals from './reportWebVitals';
 import { AppProvider } from "./Components/Context";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId="345421625779-61t5gbstpdqrhn4hkkj54jnrroro2qdd.apps.googleusercontent.com">
       <AppProvider>
         <App />
       </AppProvider>
     </GoogleOAuthProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

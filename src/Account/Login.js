@@ -179,68 +179,48 @@ function Login() {
               <div className="overlay">
                 {signin && (
                   <div className="overlay-panel overlay-left">
-                    <h1 style={{ fontWeight: "bold", margin: 0 }}>
-                      Welcome Back!
-                    </h1>
+                    <h1>Welcome Back!</h1>
                     <span className="login-p">
-                      To keep connected with us please login with your personal
-                      info
+                      To keep connected with us please login with your personal info
                     </span>
                     <div className="login_overlay_login_bottom">
                       <span>
-                        Dont Have An account ? Register with us and book your
-                        hotel right away
+                        Don't have an account? Register with us and book your hotel right away
                       </span>
-
-                      <Button
-                        style={{
-                          border: "1px solid #fff",
-                          color: "#fff",
-                          borderRadius: "11px",
-                        }}
+                      <button
+                        className="ghost-button"
                         onClick={(e) => signinbtn(e)}
                         id="signIn"
-                        variant="outlined"
                       >
                         Sign In
-                      </Button>
+                      </button>
                     </div>
                   </div>
                 )}
                 {signin || (
                   <div className="overlay-panel overlay-right">
-                    <h1 style={{ fontWeight: "bold", margin: 0 }}>
-                      Hello Friend!
-                    </h1>
+                    <h1>Hello Friend!</h1>
                     <span className="login_details_sub_header">
                       Hotel Booking and travelling made easy
                     </span>
                     <div className="login_overlay_login_bottom">
                       <span>
-                        Dont Have An account ? Register with us and book your
-                        hotel right away
+                        Don't have an account? Register with us and book your hotel right away
                       </span>
-
-                      <Button
-                        style={{
-                          border: "1px solid #fff",
-                          color: "#fff",
-                          borderRadius: "11px",
-                        }}
+                      <button
+                        className="ghost-button"
                         onClick={(e) => signupbtn(e)}
-                        variant="outlined"
                         id="signUp"
                       >
                         Sign Up
-                      </Button>
+                      </button>
                       {bookwdac && (
                         <Button
                           variant="contained"
+                          className="footer_add_btn"
                           style={{
                             textTransform: "none",
-                            // border: "1px solid var(--red)",
-                            // color: "#fff",
-                            borderRadius: "11px",
+                            borderRadius: "12px",
                           }}
                           onClick={() => {
                             setOpen(true);

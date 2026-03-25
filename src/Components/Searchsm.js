@@ -540,8 +540,13 @@ const Searchsm = () => {
               }
               variant="contained"
               style={{
-                backgroundColor: "#1ab64f",
+                background: "linear-gradient(90deg, #ff4b2b, #ff416c)",
                 textTransform: "none",
+                fontFamily: "'Outfit', sans-serif",
+                fontWeight: 600,
+                fontSize: "16px",
+                borderRadius: "10px",
+                boxShadow: "0 4px 15px rgba(255, 75, 43, 0.2)",
                 color: "#fff",
               }}
             >

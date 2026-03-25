@@ -41,11 +41,27 @@
 
 .search_hotel_card {
   display: grid;
-  grid-template-columns: 45% 55%;
-  /* grid-template-rows: 200px; */
-  grid-gap: 40px 20px;
-  padding-bottom: 15px;
-  padding-left: 20px;
+  grid-template-columns: 42% 58%;
+  grid-gap: 0;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 24px;
+}
+
+/* Fix react-slick width issues inside CSS grids */
+.search_hotel_card > * {
+  min-width: 0;
+}
+
+.search_hotel_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 }
 
 .fav,
@@ -72,19 +88,26 @@
 
 .search_card_detail {
   display: grid;
-  border-bottom: 1px solid var(--lightgray);
   align-content: space-around;
+  padding: 24px 28px;
 }
 
 .search_card_title {
-  font-size: 1.7rem;
-  font-weight: 600;
-  line-height: 24px;
-}
-.search_card_price {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
-  color: var(--red);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1a1714;
 }
+
+.search_card_price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff4b2b;
+  letter-spacing: -0.02em;
+}
+
 .search_card_header {
   display: grid;
   grid-template-columns: auto max-content;
@@ -94,19 +117,23 @@
 .hotel_amneties {
   display: grid;
   align-items: center;
-  width: 80%;
+  width: 90%;
   grid-template-columns: auto auto auto auto;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .hotel_amneties p {
+  font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 13px;
+  color: #8a8078;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .search_page_rating {
   display: grid;
   grid-template-columns: max-content max-content;
@@ -114,6 +141,7 @@
   align-items: center;
   cursor: pointer;
 }
+
 .price {
   display: -ms-grid;
   -ms-grid-columns: 1fr;
@@ -127,7 +155,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 96%;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .search_card_body {
@@ -137,11 +167,27 @@
 }
 
 .search_card_buttons {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-gap: 7%;
-  place-content: center;
-  place-items: center;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.search_card_buttons .MuiButton-contained {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c) !important;
+  border-radius: 10px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.2) !important;
+}
+
+.search_card_buttons .MuiButton-outlined {
+  border-radius: 10px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  color: #1a1714 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .map_search_card_buttons {

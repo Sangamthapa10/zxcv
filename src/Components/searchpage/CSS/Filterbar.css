@@ -2,25 +2,36 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--lightgray);
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-top: 30px;
 }
+
 .filter {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
   height: auto;
   position: sticky;
-  bottom: 0;
+  top: 100px; /* Instead of bottom: 0, stick to top below the sticky nav */
   display: grid;
-  min-height: calc(100vh - 80px);
-  grid-template-columns: 85%;
+  padding: 24px;
+  grid-template-columns: 100%;
   justify-content: center;
-  grid-gap: 14px;
+  grid-gap: 20px;
   align-content: start;
 }
+
 .filter_header {
-  font-weight: bolder;
-  font-size: 1.7rem;
-  font-weight: 650;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1714;
+  line-height: 1.1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 12px;
 }
 .filter_header_container {
   display: flex;
