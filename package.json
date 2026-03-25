@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.60",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -15,10 +12,7 @@
     "khalti-checkout-web": "^2.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-facebook-login": "^4.1.1",
-    "react-google-login": "^5.2.2",
     "react-infinite-scroll-component": "^6.1.0",
-    "react-instagram-login": "^1.4.0",
     "react-lazy-load-image-component": "^1.6.0",
     "react-list": "^0.8.17",
     "react-router-dom": "^5.2.0",
@@ -41,7 +35,15 @@
     "workbox-range-requests": "^7.1.0",
     "workbox-routing": "^7.1.0",
     "workbox-strategies": "^7.1.0",
-    "workbox-streams": "^7.1.0"
+    "workbox-streams": "^7.1.0",
+    "@mui/material": "^5.15.0",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/lab": "^5.0.0-alpha.170",
+    "@mui/styles": "^5.15.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@react-oauth/google": "^0.12.1",
+    "@greatsumini/react-facebook-login": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../Context";
 import Icons from "../Icons";
-import { Tabs, Tab } from "@material-ui/core";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { Tabs, Tab } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
-import { Modal } from "@material-ui/core";
+import { Modal } from "@mui/material";
 const AmnetyModal = ({ data }) => {
   function a11yProps(index) {
     return {

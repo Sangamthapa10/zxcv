@@ -14,17 +14,17 @@ import {
   InputAdornment,
   styled,
   ClickAwayListener,
-} from "@material-ui/core";
+} from "@mui/material";
 //icons
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
-import FaceIcon from "@material-ui/icons/Face";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
+import FaceIcon from "@mui/icons-material/Face";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 const SearchBox = styled(TextField)(() => ({
   "& fieldset": {
     borderRadius: "25px",

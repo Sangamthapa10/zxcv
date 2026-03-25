@@ -3,13 +3,13 @@ import "./CSS/LoginForm.css";
 import Customaxios from "../Axios";
 import { useGlobalContext } from "../Context";
 import { useHistory } from "react-router-dom";
-import Alert from "@material-ui/lab/Alert";
-import { TextField, Button } from "@material-ui/core";
+import Alert from "@mui/material/Alert";
+import { TextField, Button } from "@mui/material";
 
 //icons
-import SettingsIcon from "@material-ui/icons/Settings";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import Instagram from "@material-ui/icons/Instagram";
+import SettingsIcon from "@mui/icons-material/Settings";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import Instagram from "@mui/icons-material/Instagram";
 import GoogleIcon from "../CustomIcons/GoogleIcon";
 // const LightTooltip = styled(({ className, ...props }) => (
 //   <Tooltip {...props} classes={{ popper: className }} />

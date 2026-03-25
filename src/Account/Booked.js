@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./CSS/Booked.css";
 import { Authaxios } from "../Components/Axios";
-import {Table,TableBody,TableCell,TableContainer,TableHead,TableRow} from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import TablePagination from "@material-ui/core/TablePagination";
-import { createTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
-import { purple, red, blue } from "@material-ui/core/colors";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import {Table,TableBody,TableCell,TableContainer,TableHead,TableRow} from "@mui/material";
+import Button from "@mui/material/Button";
+import TablePagination from "@mui/material/TablePagination";
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { purple, red, blue } from "@mui/material/colors";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 
 const theme = createTheme(
   palette: {

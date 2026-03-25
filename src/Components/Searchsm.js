@@ -13,14 +13,14 @@ import {
   Modal,
   InputAdornment,
   styled,
-} from "@material-ui/core";
+} from "@mui/material";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 const WhSearchBox = styled(TextField)(() => ({
   "& fieldset": {
     borderRadius: "25px",

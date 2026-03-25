@@ -11,14 +11,14 @@ import {
   DialogContentText,
   Button,
   Switch,
-} from "@material-ui/core";
+} from "@mui/material";
 //icons
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import CancelIcon from "@material-ui/icons/Cancel";
-import CloseIcon from "@material-ui/icons/Close";
-import SaveIcon from "@material-ui/icons/Save";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import AddIcon from "@material-ui/icons/Add";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CancelIcon from "@mui/icons-material/Cancel";
+import CloseIcon from "@mui/icons-material/Close";
+import SaveIcon from "@mui/icons-material/Save";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import AddIcon from "@mui/icons-material/Add";
 function BookingSettings(dat) {
   const { data } = dat;
   const { setalerttype, setalert, setalerttext } = useGlobalContext();

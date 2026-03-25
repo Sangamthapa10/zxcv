@@ -11,7 +11,7 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-} from "@material-ui/core";
+} from "@mui/material";
 function FacilityEdit({ data }) {
   const {
     setadminimg,

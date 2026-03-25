@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./CSS/Navbar.css";
 import { useHistory } from "react-router-dom";
-import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import DateRange from "../DatePicker/components/DateRange/index.js";
 import Customaxios from "../Axios";
-import { Button, TextField, ClickAwayListener, Modal } from "@material-ui/core";
+import { Button, TextField, ClickAwayListener, Modal } from "@mui/material";
 import { useGlobalContext } from "../Context";
 import axios from "axios";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 import Guest_Room_Count from "../Guest_Room_Count";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Smnav = () => {
   const bguestcountref = useRef();
 
@@ -205,7 +205,7 @@ const Smnav = () => {
     setinputvalue(search);
     if (inputvalue.length > 3) {
       const result = await Customaxios.get(
-        `/api/psuggestion/?search=${inputvalue}`,
+        `/api/psuggestion/${inputvalue}/`,
         { cancelToken: cancelToken.token }
       );
       setsuggestion(result.data);

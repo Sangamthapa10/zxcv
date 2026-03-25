@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@material-ui/core";
+import { TextField, Button } from "@mui/material";
 import { Authaxios } from "../Axios";
 import { useGlobalContext } from "../Context";
 const ChangeUsername = () => {

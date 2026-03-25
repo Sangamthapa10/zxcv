@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button, InputAdornment } from "@material-ui/core";
+import { TextField, Button, InputAdornment } from "@mui/material";
 import { Authaxios } from "../Axios";
 import { useGlobalContext } from "../Context";
 import OTP from "../Auth/OTP";

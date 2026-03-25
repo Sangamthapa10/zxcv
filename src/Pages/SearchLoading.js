@@ -1,7 +1,7 @@
 import React from "react";
-import Skeleton from "@material-ui/lab/Skeleton";
+import Skeleton from "@mui/material/Skeleton";
 import "./CSS/Loading.css";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 
 const SearchLoading = () => {
   const a = [1, 2, 3, 4];

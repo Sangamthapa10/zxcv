@@ -1,6 +1,6 @@
 import React from "react";
 import "./CSS/Sloading.css";
-import Skeleton from "@material-ui/lab/Skeleton";
+import Skeleton from "@mui/material/Skeleton";
 import "../Pages/CSS/Singlepage.css";
 const SinglepageLoading = () => {
   return (

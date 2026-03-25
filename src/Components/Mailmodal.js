@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./CSS/Mailmodal.css";
 import { useGlobalContext } from "./Context";
-import { Modal, Button } from "@material-ui/core";
+import { Modal, Button } from "@mui/material";
 //icons
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 function Mailmodal() {
   const { mailmodal, setmailmodal, mailtext } = useGlobalContext();
   const [chimage, setchimage] = useState(false);

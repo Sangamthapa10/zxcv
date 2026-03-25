@@ -3,7 +3,7 @@ import "./CSS/SinglepageScrollIndicator.css";
 import { useGlobalContext } from "../Context";
 import { useParams } from "react-router-dom";
 import ShareOptions from "./ShareOptions";
-import { Button, useMediaQuery } from "@material-ui/core";
+import { Button, useMediaQuery } from "@mui/material";
 
 function SinglepageScrollIndicator() {
   const {

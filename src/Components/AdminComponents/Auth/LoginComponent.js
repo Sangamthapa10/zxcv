@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TextField, Button, useMediaQuery } from "@material-ui/core";
+import { TextField, Button, useMediaQuery } from "@mui/material";
 import Customaxios from "../../Axios";
 import "./CSS/logincomponent.css";
 import { useHistory } from "react-router-dom";

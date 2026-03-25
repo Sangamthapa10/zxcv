@@ -7,10 +7,10 @@ import {
   Table,
   TableBody,
   TableCell,
-} from "@material-ui/core";
+} from "@mui/material";
 import "./Roomkeyform.css";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import TableRow from "@material-ui/core/TableRow";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import TableRow from "@mui/material/TableRow";
 // import Axios from "axios";
 
 function Roomkeyform({ id }) {

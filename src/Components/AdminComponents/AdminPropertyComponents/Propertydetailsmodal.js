@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Authaxios } from "../../Axios";
 import Icons from "../../Icons";
 import { useGlobalContext } from "../../Context";
-import { TextField, Button, Switch } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+import { TextField, Button, Switch } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 function Propertydetailsmodal({ data }) {
   const { setalert, setalerttext, setalerttype } = useGlobalContext();
   const initialFormData = Object.freeze({

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./CSS/Roomimg_modal.css";
 import Slider from "react-slick";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { useParams, useHistory } from "react-router-dom";
 import { useGlobalContext } from "./Context";
-import { AppBar, Tabs, Tab, Typography, Box, Button } from "@material-ui/core";
+import { AppBar, Tabs, Tab, Typography, Box, Button } from "@mui/material";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (

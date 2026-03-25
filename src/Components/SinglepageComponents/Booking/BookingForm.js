@@ -5,8 +5,8 @@ import Customaxios from "../../Axios";
 import { Authaxios } from "../../Axios";
 import OTP from "../../Auth/OTP";
 import Axios from "axios";
-import { Button, TextField, InputAdornment } from "@material-ui/core";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { Button, TextField, InputAdornment } from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 function BookingForm() {
   const { userdetail, setuserdetail, otp, setbooknow } = useGlobalContext();
   const [number, setnumber] = useState();

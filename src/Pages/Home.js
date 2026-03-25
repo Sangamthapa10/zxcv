@@ -407,7 +407,7 @@ function Home() {
       {loading || (
         <div>
           <div className="city_suggest">
-            {/* <PCities cities={cities} /> */}
+            <PCities cities={cities} />
           </div>
           <div style={{ paddingTop: "30px" }} className="card_group">
             <h4 className="recommend_text_home">Highest Rated Hotels</h4>

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./CSS/Propertymeals.css";
 import { useParams, useHistory } from "react-router-dom";
 import { useGlobalContext } from "../Context";
-import { Button, useMediaQuery, Modal } from "@material-ui/core";
+import { Button, useMediaQuery, Modal } from "@mui/material";
 //icons
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import Hotel from "../SvgComponents/Mealsvg";
 
 function PropertyMeals({ data, menu, booking }) {

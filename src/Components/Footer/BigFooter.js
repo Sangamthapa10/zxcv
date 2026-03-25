@@ -3,13 +3,13 @@ import "./CSS/Footer.css";
 import { useHistory } from "react-router-dom";
 import MobileFooter from "./Mobile_footer";
 import { useGlobalContext } from "../Context";
-import { Button, useMediaQuery } from "@material-ui/core";
+import { Button, useMediaQuery } from "@mui/material";
 //icons
-import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
-import CakeIcon from "@material-ui/icons/Cake";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import CakeIcon from "@mui/icons-material/Cake";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import Logo from "../Logo";
 function BigFooter() {
   const matches = useMediaQuery("(max-width:800px)");

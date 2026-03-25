@@ -7,13 +7,13 @@ import {
   StepLabel,
   Button,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 
 // import BookingForm from "../Components/SinglepageComponents/BookingForm";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 import CompleteBooking from "../Components/CompleteBooking";
 import "./CSS/BookingPage.css";
-import EditIcon from "@material-ui/icons/Edit";
+import EditIcon from "@mui/icons-material/Edit";
 
 function getSteps() {
   return ["Enter Your Detailss", "Complete Your Booking"];

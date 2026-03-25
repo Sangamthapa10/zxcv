@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./CSS/Navbarmain.css";
 import { useHistory } from "react-router-dom";
-import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import { useGlobalContext } from "../Context";
 import DateRange from "../DatePicker/components/DateRange/index.js";
 import Guest_Room_Count from "../Guest_Room_Count";

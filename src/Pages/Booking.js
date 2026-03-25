@@ -17,8 +17,8 @@ import {
   DialogActions,
   DialogContent,
   DialogContentText,
-} from "@material-ui/core";
-import { Alert, AlertTitle } from "@material-ui/lab";
+} from "@mui/material";
+import { Alert, AlertTitle } from "@mui/lab";
 //svg
 import Unathorizedsvg from "../Components/SvgComponents/Unathorizedsvg";
 import NoBookingsvg from "../Components/SvgComponents/NoBookingsvg";
@@ -27,14 +27,14 @@ import PropertyMeals from "../Components/SinglepageComponents/PropertyMeals";
 import Loading from "./Loading";
 import DateRange from "../Components/DatePicker/components/DateRange/index.js";
 //icons
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import StarsIcon from "@material-ui/icons/Stars";
-import SaveIcon from "@material-ui/icons/Save";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
+import StarsIcon from "@mui/icons-material/Stars";
+import SaveIcon from "@mui/icons-material/Save";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 //lazy load
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";

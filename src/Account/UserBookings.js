@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../Components/Context";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 import { useHistory } from "react-router-dom";
 import { Authaxios } from "../Components/Axios";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 function UserBookings() {
   const { guestcount, roomcount, checkin_date, checkout_date } =
     useGlobalContext();

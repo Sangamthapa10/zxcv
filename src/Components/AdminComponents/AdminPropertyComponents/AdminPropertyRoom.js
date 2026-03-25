@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../../Context";
 import { Authaxios } from "../../Axios";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import { Button, TextField } from "@material-ui/core";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { Button, TextField } from "@mui/material";
 import "./CSS/AdminPropertyRoom.css";
 function AdminPropertyRoom() {
   const { setadminimg, setalerttype, setalert, setalerttext } =

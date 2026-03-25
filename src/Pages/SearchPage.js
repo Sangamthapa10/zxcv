@@ -15,13 +15,13 @@ import {
   useMediaQuery,
   Modal,
   Button,
-} from "@material-ui/core";
+} from "@mui/material";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import TrendingUpIcon from "@material-ui/icons/TrendingUp";
-import TrendingDownIcon from "@material-ui/icons/TrendingDown";
-import GradeIcon from "@material-ui/icons/Grade";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import TrendingDownIcon from "@mui/icons-material/TrendingDown";
+import GradeIcon from "@mui/icons-material/Grade";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 const theme = createTheme({
   zIndex: {
     modal: 201,

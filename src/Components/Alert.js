@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useGlobalContext } from "./Context";
-import Alert from "@material-ui/lab/Alert";
+import Alert from "@mui/material/Alert";
 function Alertmsg() {
   const { alerttype, alert, setalert, alerttext } = useGlobalContext();
   useEffect(() => {

@@ -12,13 +12,13 @@ import {
   Checkbox,
   FormControlLabel,
   ClickAwayListener,
-} from "@material-ui/core";
+} from "@mui/material";
 //icons
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import StarIcon from "@material-ui/icons/Star";
-import WhatshotIcon from "@material-ui/icons/Whatshot";
-import ExploreIcon from "@material-ui/icons/Explore";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import StarIcon from "@mui/icons-material/Star";
+import WhatshotIcon from "@mui/icons-material/Whatshot";
+import ExploreIcon from "@mui/icons-material/Explore";
 function SearchHotelCard({ realdata }) {
   const { setselectroom, setlogin } = useGlobalContext();
   const mob = useMediaQuery("(max-width:900px)");

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./CSS/Mealmodal.css";
 import { Authaxios } from "../../Axios";
 import { useGlobalContext } from "../../Context";
-import { Button, TextField } from "@material-ui/core";
+import { Button, TextField } from "@mui/material";
 import Axios from "axios";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const MealModal = () => {
   const [img, setimg] = useState([]);
   const {

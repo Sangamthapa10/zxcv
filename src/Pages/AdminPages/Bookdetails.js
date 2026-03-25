@@ -3,7 +3,7 @@ import { Authaxios } from "../../Components/Axios";
 
 import AdminSidebar from "../../Components/AdminComponents/AdminSidebar";
 import { useParams } from "react-router-dom";
-import { Table, TableBody, TableCell, TableRow } from "@material-ui/core";
+import { Table, TableBody, TableCell, TableRow } from "@mui/material";
 
 const Bookdetails = () => {
   const { id } = useParams();

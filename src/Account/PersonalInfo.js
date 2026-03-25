@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./CSS/PersonalInfo.css";
 import Axios from "axios";
 import { Authaxios } from "../Components/Axios";
-import { Modal } from "@material-ui/core";
+import { Modal } from "@mui/material";
 import { useGlobalContext } from "../Components/Context";
 import ChangeNumber from "../Components/Profile/ChangeNumber";
 import ChangeUsername from "../Components/Profile/ChangeUsername";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import EditIcon from "@material-ui/icons/Edit";
-import CloseIcon from "@material-ui/icons/Close";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import EditIcon from "@mui/icons-material/Edit";
+import CloseIcon from "@mui/icons-material/Close";
 import { useHistory } from "react-router-dom";
 const PersonalInfo = () => {
   const {

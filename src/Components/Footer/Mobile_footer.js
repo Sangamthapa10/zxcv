@@ -2,18 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./CSS/Footer.css";
 import { useLocation, Link } from "react-router-dom";
 //material ui
-import {
-  useMediaQuery,
-  BottomNavigation,
-  BottomNavigationAction,
-  makeStyles,
-} from "@material-ui/core";
+import { useMediaQuery, BottomNavigation, BottomNavigationAction } from '@mui/material';
 //icons
-import SearchIcon from "@material-ui/icons/Search";
-import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import HomeIcon from "@material-ui/icons/Home";
+import SearchIcon from "@mui/icons-material/Search";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import HomeIcon from "@mui/icons-material/Home";
+import { makeStyles } from '@mui/styles';
 const styles = makeStyles({
   root: {
     color: "green",

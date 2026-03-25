@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CSS/Propertymeals.css";
 import { useGlobalContext } from "../Context";
-import { Button, TextField, InputAdornment } from "@material-ui/core";
+import { Button, TextField, InputAdornment } from "@mui/material";
 function Map() {
   const { singlepage, setlat, setlon, lat, lon } = useGlobalContext();
   const [a, b] = React.useState("");

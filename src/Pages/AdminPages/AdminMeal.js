@@ -3,8 +3,8 @@ import { useGlobalContext } from "../../Components/Context";
 import { Authaxios } from "../../Components/Axios";
 import AdminSidebar from "../../Components/AdminComponents/AdminSidebar";
 import "./CSS/adminmeal.css";
-import { TextField } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
+import { TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const AdminMeal = () => {
   const { setmailmodal, setmailtext, adminbooking, setadminbooking } =

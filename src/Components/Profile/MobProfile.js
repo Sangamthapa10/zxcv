@@ -2,18 +2,18 @@ import React, { useEffect } from "react";
 import "./CSS/MobProfile.css";
 import { useHistory } from "react-router-dom";
 import { useGlobalContext } from "../Context";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { Authaxios } from "../Axios";
 import Axios from "axios";
 //icons
-import FingerprintIcon from "@material-ui/icons/Fingerprint";
-import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import ApartmentIcon from "@material-ui/icons/Apartment";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import CreditCardIcon from "@material-ui/icons/CreditCard";
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import FingerprintIcon from "@mui/icons-material/Fingerprint";
+import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 const MobProfile = () => {
   const matches = useMediaQuery("(max-width:100px)");
   const mob = useMediaQuery("(max-width:600px)");

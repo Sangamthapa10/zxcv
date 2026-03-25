@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./CSS/DetailReview.css";
-import { Modal, styled, TextField, InputAdornment } from "@material-ui/core";
+import { Modal, styled, TextField, InputAdornment } from "@mui/material";
 //icons
 import ReviewScore from "./review/ReviewScore";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import StarIcon from "@material-ui/icons/Star";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import StarIcon from "@mui/icons-material/Star";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
 const WhSearchBox = styled(TextField)(() => ({
   "& fieldset": {
     borderRadius: "25px",

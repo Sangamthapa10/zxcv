@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect } from "react";
 import Slider from "react-slick";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./CSS/Roomimg_modal.css";
 import { useGlobalContext } from "./Context";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import RemoveOutlinedIcon from "@material-ui/icons/RemoveOutlined";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   return (

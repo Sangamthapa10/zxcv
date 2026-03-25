@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Authaxios } from "../Components/Axios";
 import { useGlobalContext } from "../Components/Context";
 import { useHistory } from "react-router-dom";
-import { Button, TextField } from "@material-ui/core";
+import { Button, TextField } from "@mui/material";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import CloseIcon from "@material-ui/icons/Close";
-import EditIcon from "@material-ui/icons/Edit";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import CloseIcon from "@mui/icons-material/Close";
+import EditIcon from "@mui/icons-material/Edit";
 
 const Pwchange = () => {
   const { setmailmodal, setmailtext, setalert, setalerttext, setalerttype } =

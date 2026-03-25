@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "./Context";
 import Customaxios from "./Axios";
-import { Modal, TextField, Button, InputAdornment } from "@material-ui/core";
+import { Modal, TextField, Button, InputAdornment } from "@mui/material";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 function Suggest() {
   const initialformData = Object.freeze({
     hotel: "",

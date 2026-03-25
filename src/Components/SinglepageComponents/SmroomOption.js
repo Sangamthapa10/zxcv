@@ -5,10 +5,10 @@ import Icons from "../Icons";
 import { useGlobalContext } from "../Context";
 import { useParams } from "react-router-dom";
 //mui
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 //icons
-import ImageIcon from "@material-ui/icons/Image";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import ImageIcon from "@mui/icons-material/Image";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 function SmroomOption() {
   const one = useRef();

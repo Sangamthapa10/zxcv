@@ -12,19 +12,19 @@ import {
   Button,
   TextField,
   ClickAwayListener,
-  withStyles,
   useMediaQuery,
   InputAdornment,
-} from "@material-ui/core";
+} from "@mui/material";
+import { withStyles } from "@mui/styles";
 //icons
-import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
-import SearchIcon from "@material-ui/icons/Search";
-import CloseIcon from "@material-ui/icons/Close";
-import HistoryIcon from "@material-ui/icons/History";
-import FaceIcon from "@material-ui/icons/Face";
-import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
+import HistoryIcon from "@mui/icons-material/History";
+import FaceIcon from "@mui/icons-material/Face";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 //svg
 import Hotel from "../SvgComponents/Hotel";
 const SearchBox = withStyles({
@@ -243,7 +243,8 @@ function BigNavbar() {
     setaccount_dropdown(true);
   };
   const logout = () => {
-console.log("fasn")
+    localStorage.removeItem("axynghkwngasd");
+    window.location.reload();
   };
   const changedate = (i) => {
     setState([i.selection]);
@@ -314,7 +315,7 @@ console.log("fasn")
                     <ListItemIcon>
                       <ExitToAppIcon />
                     </ListItemIcon>
-                    Logoutnow
+                    Logout
                   </MenuItem>
                 </div>
               ))}

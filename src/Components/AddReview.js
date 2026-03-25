@@ -4,15 +4,16 @@ import { useGlobalContext } from "./Context";
 import PropTypes from "prop-types";
 import { Authaxios } from "./Axios";
 //mui
-import { Modal, withStyles, Button, TextField, Box } from "@material-ui/core";
-import { Rating } from "@material-ui/lab";
+import { Modal, Button, TextField, Box } from '@mui/material';
+import { Rating } from "@mui/lab";
 //icons
-import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
-import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied";
-import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
-import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAltOutlined";
-import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
+import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
+import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAltOutlined";
+import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import { withStyles } from '@mui/styles';
 function AddReview() {
   const { addreview, setaddreview } = useGlobalContext();
 

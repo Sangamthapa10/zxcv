@@ -1,7 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../../Context";
-import LinearProgress from "@material-ui/core/LinearProgress";
-import StarIcon from "@material-ui/icons/Star";
+import LinearProgress from "@mui/material/LinearProgress";
+import StarIcon from "@mui/icons-material/Star";
 function ReviewScore({ a }) {
   const { singlepage } = useGlobalContext();
   return (

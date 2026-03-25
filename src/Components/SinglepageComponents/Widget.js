@@ -2,8 +2,8 @@ import React from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useGlobalContext } from "../Context";
 //icons
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
-import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 const SWidget = ({ data }) => {
   const history = useHistory();

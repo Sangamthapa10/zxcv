@@ -1,6 +1,6 @@
 import React from "react";
-import { List, ListItem, ListItemIcon } from "@material-ui/core";
-import FlightIcon from "@material-ui/icons/Flight";
+import { List, ListItem, ListItemIcon } from "@mui/material";
+import FlightIcon from "@mui/icons-material/Flight";
 const GuestPolicy = () => {
   return (
     <div className="policy_container">

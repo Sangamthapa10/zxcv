@@ -3,11 +3,11 @@ import "./CSS/error.css";
 import Searchnotfoundsvg from "../SvgComponents/Searchnotfound";
 import { useGlobalContext } from "../Context";
 import { useParams, useHistory } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 //icons
-import TuneIcon from "@material-ui/icons/Tune";
-import HomeIcon from "@material-ui/icons/Home";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import TuneIcon from "@mui/icons-material/Tune";
+import HomeIcon from "@mui/icons-material/Home";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 function Error({ type }) {
   const { setfilterdata, searchdata, setsuggestmodal, setValue, min, max } =
     useGlobalContext();

@@ -1,9 +1,9 @@
 import React from "react";
 import "./CSS/Loading.css";
-import Skeleton from "@material-ui/lab/Skeleton";
-import { useMediaQuery } from "@material-ui/core";
+import Skeleton from "@mui/material/Skeleton";
+import { useMediaQuery } from "@mui/material";
 import Slider from "react-slick";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 
 function Loading({ type, loadingoff }) {
   const matches = useMediaQuery("(max-width:600px)");

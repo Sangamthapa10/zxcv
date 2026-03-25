@@ -13,17 +13,17 @@ import {
   Button,
   FormControlLabel,
   Checkbox,
-} from "@material-ui/core";
+} from "@mui/material";
 //Material ui icons
-import ExploreIcon from "@material-ui/icons/Explore";
-import PolicyIcon from "@material-ui/icons/Policy";
-import LocationCityIcon from "@material-ui/icons/LocationCity";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import StarIcon from "@material-ui/icons/Star";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import RoomServiceIcon from "@material-ui/icons/RoomService";
+import ExploreIcon from "@mui/icons-material/Explore";
+import PolicyIcon from "@mui/icons-material/Policy";
+import LocationCityIcon from "@mui/icons-material/LocationCity";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import StarIcon from "@mui/icons-material/Star";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
 //singlepage components
 import BookingDetails from "../Components/SinglepageComponents/BookingDetails";
 import SmroomOption from "../Components/SinglepageComponents/SmroomOption";

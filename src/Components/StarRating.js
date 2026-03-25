@@ -1,6 +1,6 @@
 import React from "react";
-import Rating from "@material-ui/lab/Rating";
-import { Box } from "@material-ui/core";
+import Rating from "@mui/material/Rating";
+import { Box } from "@mui/material";
 import { Authaxios } from "./Axios";
 const StarRating = () => {
   const [value, setValue] = React.useState(2);

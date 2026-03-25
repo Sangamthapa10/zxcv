@@ -8,7 +8,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
-} from "@material-ui/core";
+} from "@mui/material";
 import { Authaxios } from "../Axios";
 import Roomkeyform from "./AdminInboxComponents/Roomkeyform";
 

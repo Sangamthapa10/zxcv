@@ -2,9 +2,9 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { rangeShape } from "../DayCell";
 import Month from "../Month";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import { Button } from "@material-ui/core";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Button } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import DateInput from "../DateInput";
 import {
   calcFocusDate,

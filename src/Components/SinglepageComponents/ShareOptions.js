@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../Context";
-import { Modal, Button, TextField } from "@material-ui/core";
+import { Modal, Button, TextField } from "@mui/material";
 //icons
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import EmailIcon from "@material-ui/icons/Email";
-import TextsmsIcon from "@material-ui/icons/Textsms";
-import TelegramIcon from "@material-ui/icons/Telegram";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import ShareIcon from "@material-ui/icons/Share";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EmailIcon from "@mui/icons-material/Email";
+import TextsmsIcon from "@mui/icons-material/Textsms";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import ShareIcon from "@mui/icons-material/Share";
 
 function ShareOptions({ img, tops }) {
   const { setalerttype, singlepage, setalerttext, setsnackbar } =

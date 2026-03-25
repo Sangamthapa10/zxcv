@@ -2,12 +2,10 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { useGlobalContext } from "./Context";
 import Slider from "react-slick";
-//mui
-import { useMediaQuery } from "@material-ui/core";
-//icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
+import { useMediaQuery } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 
 const PCities = ({ cities }) => {
   const { checkin_date, setlat, setlon, checkout_date, roomcount, guestcount } =
@@ -30,11 +28,7 @@ const PCities = ({ cities }) => {
     setlat(position.coords.latitude);
     setlon(position.coords.longitude);
     history.push(
-      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${
-        position.coords.latitude
-      }/longitude=${
-        position.coords.longitude
-      }/filter=/type=/guest_rating=/order=`
+      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
     );
   }
 
@@ -56,6 +50,7 @@ const PCities = ({ cities }) => {
         console.log("");
     }
   }
+
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -64,6 +59,7 @@ const PCities = ({ cities }) => {
       setlon("");
     }
   }
+
   function SampleNextArrows(props) {
     const { onClick, currentSlide } = props;
     return (
@@ -71,10 +67,8 @@ const PCities = ({ cities }) => {
         <div className="fab_arrow">
           <ArrowForwardIosIcon style={{ fontSize: "20px", color: "red" }} />
         </div>
-        {currentSlide > cities.length - 3 ? (
-          ""
-        ) : (
-          <div style={{ top: " -47%" }} className="mob_arrow">
+        {currentSlide > cities.length - 3 ? "" : (
+          <div style={{ top: "-47%" }} className="mob_arrow">
             <ArrowForwardIosIcon />
           </div>
         )}
@@ -88,20 +82,14 @@ const PCities = ({ cities }) => {
       <div className="arrowprev" onClick={onClick}>
         {currentSlide > 0 ? (
           <div className="fab_arrow">
-            <ArrowBackIosIcon
-              style={{ fontSize: "20px", marginLeft: "9px", color: "red" }}
-            />
+            <ArrowBackIosIcon style={{ fontSize: "20px", marginLeft: "9px", color: "red" }} />
           </div>
-        ) : (
-          ""
-        )}
+        ) : ""}
         {currentSlide > cities.length - 3 ? (
           <div style={{ top: "-47%" }} className="mob_arrow">
             <ArrowBackIosIcon />
           </div>
-        ) : (
-          ""
-        )}
+        ) : ""}
       </div>
     );
   }
@@ -118,55 +106,55 @@ const PCities = ({ cities }) => {
     nextArrow: <SampleNextArrows />,
     prevArrow: <SamplePrevArrows />,
   };
+
   const matches = useMediaQuery("(max-width:600px)");
 
   return (
     <div className="popular_city_container">
-      <div>
-        <h3 className="p">Popular Cities</h3>
-        <p style={{ paddingTop: "9px" }}>We found this places for you</p>
+      <div className="pcities_header">
+        <h3 className="pcities_title">Popular Cities</h3>
+        <p className="pcities_subtitle">Handpicked destinations for you</p>
       </div>
+
+      {/* Desktop grid */}
       {matches || (
         <div className="popular_city_body">
-          {cities.slice(0, 5).map((mapped, i) => {
-            return (
-              <div
-                onClick={() => getLocations(mapped.city)}
-                style={{ background: `url(${mapped.img.img})` }}
-                className={`pop_btns`}
-                key={mapped.id}
-              >
-                <div
-                  style={{ position: "absolute", bottom: "20px", left: "20px" }}
-                >
-                  <h4>{mapped.city}</h4>
-                  <p>{mapped.details}</p>
-                </div>
+          {cities.slice(0, 5).map((mapped, i) => (
+            <div
+              key={mapped.id}
+              onClick={() => getLocations(mapped.city)}
+              style={{ backgroundImage: `url(${mapped.img.img})` }}
+              className="pop_btns"
+            >
+              <div className="pop_btns_overlay" />
+              <div className="pop_btns_content">
+                <h4 className="pop_btns_city">{mapped.city}</h4>
+                <p className="pop_btns_detail">{mapped.details}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       )}
+
+      {/* Mobile slider */}
       {matches && (
         <Slider {...settings}>
-          <div className="story_place ">
-            <div className="near_circle">
-              <LocationSearchingIcon onClick={getLocation} />
+          <div className="story_place">
+            <div className="near_circle" onClick={getLocation}>
+              <LocationSearchingIcon style={{ fontSize: "22px", color: "#ee2e24" }} />
             </div>
-            <h4>Nearby</h4>
+            <h4 className="story_label">Nearby</h4>
           </div>
-          {cities.map((mapped, i) => {
-            return (
-              <div
-                onClick={() => getLocation(mapped.city)}
-                className="story_place"
-                key={mapped.id}
-              >
-                <img src={mapped.img.img} alt="destination_image" />
-                <h4>{mapped.city}</h4>
-              </div>
-            );
-          })}
+          {cities.map((mapped) => (
+            <div
+              key={mapped.id}
+              onClick={() => getLocation(mapped.city)}
+              className="story_place"
+            >
+              <img src={mapped.img.img} alt="destination_image" />
+              <h4 className="story_label">{mapped.city}</h4>
+            </div>
+          ))}
         </Slider>
       )}
     </div>

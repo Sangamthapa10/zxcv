@@ -13,10 +13,10 @@ import {
   Table,
   TableBody,
   TableCell,
-} from "@material-ui/core";
+} from "@mui/material";
 // Icons
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import FileCopyIcon from "@mui/icons-material/FileCopy";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 function BookingConfirmed() {
   const { bookingconfirmed, setbookingconfirmed, setmailmodal, setmailtext } =
     useGlobalContext();

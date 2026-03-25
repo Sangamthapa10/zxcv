@@ -3,8 +3,8 @@ import "./CSS/BookingConfirm.css";
 import { useGlobalContext } from "../Context";
 import { useParams, useHistory } from "react-router-dom";
 import CompleteBooking from "./Booking/CompleteBooking";
-import { useMediaQuery } from "@material-ui/core";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { useMediaQuery } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 function BookingConfirmMobile() {
   const matches = useMediaQuery("(max-width:600px)");
 

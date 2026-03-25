@@ -16,11 +16,11 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
-} from "@material-ui/core";
+} from "@mui/material";
 // Icons
-import StarIcon from "@material-ui/icons/Star";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
+import StarIcon from "@mui/icons-material/Star";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 const Favourite = () => {
   const { guestcount, roomcount, setlogin } = useGlobalContext();
   const [bloading, setbloading] = useState(true);
@@ -125,18 +125,19 @@ const Favourite = () => {
                   room_option,
                   hotel_dp,
                   liked,
-                  room,
                   rating,
                   amneties,
                 } = mapped;
-                let default_room = room.room;
+                let room = room_option
+                console.log(favdata)
+                let default_room = room && room.room ? room.room : [];
                 return (
                   <div
                     onClick={(e) => Single(e, id, Name, default_room.id)}
                     key={id}
                     className="fav_card"
                   >
-                    <img src={default_room.room_dp.img} alt="" />
+                    <img src={hotel_dp.img} alt="" />
                     <FormControlLabel
                       className="fav_card__heart"
                       control={
@@ -167,7 +168,7 @@ const Favourite = () => {
                           }}
                           className="hotel_amneties"
                         >
-                          {amneties.data.map((mapped) => {
+                          {facility.map((mapped) => {
                             return (
                               <div
                                 style={{
@@ -182,14 +183,14 @@ const Favourite = () => {
                               </div>
                             );
                           })}
-                          {amneties.total > 3 && (
+                          {facility.total > 3 && (
                             <p
                               style={{
                                 display: "flex",
                                 justifyContent: "flex-end",
                               }}
                             >
-                              + {amneties.total - 3} more{" "}
+                              + {facility.total - 3} more{" "}
                             </p>
                           )}
                         </div>

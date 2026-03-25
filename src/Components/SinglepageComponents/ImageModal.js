@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { useGlobalContext } from "../Context";
 //icons
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 
 const ImageModal = ({ data }) => {
   const { setimgmodal } = useGlobalContext();

@@ -13,7 +13,7 @@ import {
   Cell,
 } from "recharts";
 import "./CSS/StatComponents.css";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material";
 
 function StayBar() {
   const barColors = [

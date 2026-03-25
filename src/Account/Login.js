@@ -14,8 +14,8 @@ import {
   Dialog,
   DialogContentText,
   DialogActions,
-} from "@material-ui/core";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+} from "@mui/material";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 function Login() {
   const {
     login,

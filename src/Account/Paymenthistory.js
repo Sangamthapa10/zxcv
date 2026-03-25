@@ -3,7 +3,7 @@ import { Authaxios } from "../Components/Axios";
 import { useGlobalContext } from "../Components/Context";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 function Paymenthistory() {
   const [data, setdata] = useState([]);

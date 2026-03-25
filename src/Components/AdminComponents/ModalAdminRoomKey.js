@@ -1,9 +1,9 @@
 import React from "react";
 import { useGlobalContext } from "../../Components/Context";
-import { Modal } from "@material-ui/core";
+import { Modal } from "@mui/material";
 import AdminRoomKey from "../../Components/AdminComponents/AdminRoomKey";
 import Icons from "../Icons";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 function ModalAdminRoomKey() {
   const { keymodal, setkeymodal, adminreqdata, reqadmin } = useGlobalContext();

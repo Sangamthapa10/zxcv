@@ -3,10 +3,10 @@ import Customaxios from "../Axios";
 import { useGlobalContext } from "../Context";
 import Otp from "./OTP";
 //material ui
-import { Button, TextField } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
+import { Button, TextField } from "@mui/material";
+import Alert from "@mui/material/Alert";
 //icons
-import LockIcon from "@material-ui/icons/Lock";
+import LockIcon from "@mui/icons-material/Lock";
 const PwResetForm = () => {
   const { otp, setlogin, setresetpw } = useGlobalContext();
   const initialFormData = Object.freeze({

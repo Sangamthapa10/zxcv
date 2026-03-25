@@ -7,8 +7,8 @@ import AdminSidebar from "../../Components/AdminComponents/AdminSidebar";
 import "./CSS/AdminDash.css";
 import "./CSS/AdminHome.css";
 //icons
-import RoomServiceIcon from "@material-ui/icons/RoomService";
-import ImportContactsIcon from "@material-ui/icons/ImportContacts";
+import RoomServiceIcon from "@mui/icons-material/RoomService";
+import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 const AdminDash = () => {
   const { setchartdata, chartdata, setmailmodal, setmailtext } =
     useGlobalContext();

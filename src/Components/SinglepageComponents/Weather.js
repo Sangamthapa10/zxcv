@@ -4,91 +4,69 @@ import Axios from "axios";
 import Slider from "react-slick";
 import { useGlobalContext } from "../Context";
 import { useParams } from "react-router-dom";
+
 //icons
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const Weather = () => {
   const { singlepage } = useGlobalContext();
-  const [data, setdata] = useState([]);
-  const { check_in } = useParams();
-  const { check_out } = useParams();
-  const [loading, setloading] = useState(false);
-  useEffect(() => {
-    let source = Axios.CancelToken.source();
-    const fetchdata = async () => {
-      Axios.get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${singlepage[0].latitude}&lon=${singlepage[0].longitude}&exclude=35&units=metric&appid=26d924dc06c5a1aad7c7ea8c0c7a65fc`
-      )
-        .then((res) => {
-          const a = res.data;
-          const b = a.daily;
+  const { check_in, check_out } = useParams();
 
-          setdata(b);
-          setloading(true);
-        })
-        .catch((error) => {
-          if (Axios.isCancel(error)) {
-            console.log("AxiosCancel: caught cancel");
-          } else {
-            throw error;
-          }
-        });
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // weather icon mapping
+  const getWeatherIcon = (code) => {
+    if (code === 0) return "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // clear
+    if ([1,2].includes(code)) return "https://cdn-icons-png.flaticon.com/512/1163/1163624.png"; // partly cloudy
+    if (code === 3) return "https://cdn-icons-png.flaticon.com/512/414/414825.png"; // cloudy
+    if ([45,48].includes(code)) return "https://cdn-icons-png.flaticon.com/512/4005/4005901.png"; // fog
+    if ([51,53,55,61,63,65].includes(code)) return "https://cdn-icons-png.flaticon.com/512/1163/1163657.png"; // rain
+    if ([71,73,75].includes(code)) return "https://cdn-icons-png.flaticon.com/512/642/642102.png"; // snow
+    if ([95,96,99].includes(code)) return "https://cdn-icons-png.flaticon.com/512/1146/1146869.png"; // thunder
+    return "https://cdn-icons-png.flaticon.com/512/1163/1163624.png";
+  };
+
+  useEffect(() => {
+    if (!singlepage || !singlepage[0]) return;
+
+    const fetchWeather = async () => {
+      try {
+        const res = await Axios.get(
+          `https://api.open-meteo.com/v1/forecast?latitude=${singlepage[0].latitude}&longitude=${singlepage[0].longitude}&daily=weathercode,temperature_2m_max&timezone=auto`
+        );
+
+        const daily = res.data.daily;
+
+        const formatted = daily.time.map((date, i) => ({
+          date,
+          temp: daily.temperature_2m_max[i],
+          weathercode: daily.weathercode[i]
+        }));
+
+        setData(formatted);
+        setLoading(true);
+      } catch (err) {
+        console.log(err);
+      }
     };
-    fetchdata();
-    return () => {
-      source.cancel();
-    };
+
+    fetchWeather();
   }, [singlepage]);
-  function SampleNextArrow(props) {
-    const { onClick, currentSlide } = props;
+
+  function SampleNextArrow({ onClick }) {
     return (
       <div className="arrownext" onClick={onClick}>
-        {currentSlide > 2 ? (
-          ""
-        ) : (
-          <div className="fab_arrow">
-            <ArrowForwardIosIcon
-              style={{
-                fontSize: "14px",
-                color: "black",
-                marginRight: "1vw",
-                zIndex: 10,
-              }}
-            />
-          </div>
-        )}
-        {currentSlide < 2 && (
-          <div className="mob_arrow">
-            <ArrowForwardIosIcon />
-          </div>
-        )}
+        <ArrowForwardIosIcon />
       </div>
     );
   }
-  function SamplePrevArrow(props) {
-    const { onClick, currentSlide } = props;
+
+  function SamplePrevArrow({ onClick }) {
     return (
       <div className="arrowprev" onClick={onClick}>
-        {currentSlide > 1 ? (
-          <div className="fab_arrow">
-            <ArrowBackIosIcon
-              style={{
-                fontSize: "14px",
-                color: "black",
-                marginLeft: "10px",
-                zIndex: 10,
-              }}
-            />
-          </div>
-        ) : (
-          ""
-        )}
-        {currentSlide > 1 && (
-          <div className="mob_arrow">
-            <ArrowBackIosIcon />
-          </div>
-        )}
+        <ArrowBackIosIcon />
       </div>
     );
   }
@@ -98,80 +76,69 @@ const Weather = () => {
     speed: 700,
     slidesToShow: 5,
     slidesToScroll: 2,
-    autoplay: false,
     infinite: false,
-    autoplaySpeed: 1000,
-    pauseOnHover: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-
     responsive: [
       {
         breakpoint: 425,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
-          initialSlide: 5,
-        },
+          slidesToScroll: 1
+        }
       },
       {
         breakpoint: 250,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 5,
-        },
-      },
-    ],
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
+
+  if (!loading) return <h1>Loading...</h1>;
+
   return (
-    <>
-      {loading ? (
-        <div className="weather_container">
-          <Slider {...settings}>
-            {data.map((mappe) => {
-              const milliseconds = mappe.dt * 1000;
-              const data = new Date(milliseconds).toUTCString();
-              const checkin = new Date(check_in).toUTCString();
-              const checkout = new Date(check_out).toUTCString();
-              const codate = checkout.slice(0, 11);
-              const chdate = checkin.slice(0, 11);
-              const vdate = data.slice(0, 11);
-              return (
-                <div className="weather__" key={mappe.dt}>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      visibility:
-                        vdate !== chdate && codate !== vdate ? "hidden" : "",
-                    }}
-                  >
-                    {vdate === chdate
-                      ? "Checkin"
-                      : codate === vdate
-                      ? "Checkout"
-                      : "asd"}
-                  </p>
+    <div className="weather_container">
+      <Slider {...settings}>
+        {data.map((item, i) => {
+          const date = new Date(item.date).toUTCString().slice(0, 11);
+          const checkin = new Date(check_in).toUTCString().slice(0, 11);
+          const checkout = new Date(check_out).toUTCString().slice(0, 11);
 
-                  <div className="weather__detail">
-                    <p className="vdate">{vdate}</p>
-                    <h4 className="weather_main">{mappe.weather[0].main}</h4>
-                    <img
-                      src={`http://openweathermap.org/img/w/${mappe.weather[0].icon}.png`}
-                      alt="one"
-                    />
+          return (
+            <div className="weather__" key={i}>
+              <p
+                style={{
+                  fontWeight: "bold",
+                  visibility:
+                    date !== checkin && date !== checkout ? "hidden" : "visible"
+                }}
+              >
+                {date === checkin
+                  ? "Checkin"
+                  : date === checkout
+                  ? "Checkout"
+                  : ""}
+              </p>
 
-                    <p className="temp">{mappe.temp.day}&deg;C</p>
-                  </div>
-                </div>
-              );
-            })}
-          </Slider>
-        </div>
-      ) : (
-        <h1>Loading</h1>
-      )}
-    </>
+              <div className="weather__detail">
+                <p className="vdate">{date}</p>
+
+                <img
+                  src={getWeatherIcon(item.weathercode)}
+                  alt="weather"
+                  style={{ width: "40px" }}
+                />
+
+                <p className="temp">{item.temp}°C</p>
+              </div>
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
   );
 };
 

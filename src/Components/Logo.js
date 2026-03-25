@@ -384,12 +384,12 @@ export default Logo;
 import "./CSS/BookingForm.css";
 import { useGlobalContext } from "../../Context";
 import Customaxios from "../../Axios";
-import TextField from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
+import TextField from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
 import { Authaxios } from "../../Axios";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import OTP from "../../Auth/OTP";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 function BookingForm(data) {
   const { userdetail, setuserdetail, otp, setbooknow } = useGlobalContext();
   const [number, setnumber] = useState();

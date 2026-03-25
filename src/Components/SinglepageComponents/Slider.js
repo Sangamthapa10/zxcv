@@ -8,13 +8,13 @@ import Imggallery from "./Imggallery";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 //mui
-import Skeleton from "@material-ui/lab/Skeleton";
-import { Button, Fab, useMediaQuery } from "@material-ui/core";
+import Skeleton from "@mui/material/Skeleton";
+import { Button, Fab, useMediaQuery } from "@mui/material";
 //icons
-import CollectionsIcon from "@material-ui/icons/Collections";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import CollectionsIcon from "@mui/icons-material/Collections";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 const Sliders = () => {
   const matches = useMediaQuery("(max-width:600px)");
   const tab_screen = useMediaQuery("(max-width:900px)");

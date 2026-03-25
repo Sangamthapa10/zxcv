@@ -2,15 +2,15 @@ import React, { useEffect } from "react";
 import "./CSS/Adminside.css";
 import { Link, useLocation } from "react-router-dom";
 import { useGlobalContext } from "../Context";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material";
 // mu icons
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import HomeIcon from "@material-ui/icons/Home";
-import EqualizerIcon from "@material-ui/icons/Equalizer";
-import ApartmentIcon from "@material-ui/icons/Apartment";
-import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
-import ScheduleIcon from "@material-ui/icons/Schedule";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import FastfoodIcon from "@mui/icons-material/Fastfood";
+import HomeIcon from "@mui/icons-material/Home";
+import EqualizerIcon from "@mui/icons-material/Equalizer";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 //svg
 import Hotel from "../SvgComponents/Hotel";
 function AdminSidebar() {

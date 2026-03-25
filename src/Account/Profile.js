@@ -3,7 +3,7 @@ import "./CSS/Profile.css";
 import LoginForm from "../Components/Auth/LoginForm";
 import SignUpForm from "../Components/Auth/SignUpForm";
 import MobProfile from "../Components/Profile/MobProfile";
-import { Button, useMediaQuery } from "@material-ui/core";
+import { Button, useMediaQuery } from "@mui/material";
 function Profile() {
   const matches = useMediaQuery("(max-width:600px)");
   const [logins, setlogins] = useState(true);

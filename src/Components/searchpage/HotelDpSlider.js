@@ -1,11 +1,11 @@
 import React from "react";
 import "./CSS/Hoteldpslider.css";
 import Slider from "react-slick";
-import { Fab } from "@material-ui/core";
+import { Fab } from "@mui/material";
 //icons
-import ApartmentIcon from "@material-ui/icons/Apartment";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ApartmentIcon from "@mui/icons-material/Apartment";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 function HotelDpSlider(img) {
   let slide_img = img.img;
 

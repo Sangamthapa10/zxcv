@@ -17,12 +17,12 @@ import {
   TableCell,
   TableHead,
   TableRow,
-} from "@material-ui/core";
+} from "@mui/material";
 //icons
-import CreditCardIcon from "@material-ui/icons/CreditCard";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import ApartmentIcon from "@material-ui/icons/Apartment";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import ApartmentIcon from "@mui/icons-material/Apartment";
 function CompleteBooking() {
   const bookformref = useRef();
   const { id } = useParams();

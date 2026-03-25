@@ -4,26 +4,16 @@ import { useGlobalContext } from "../Context";
 import Customaxios from "../Axios";
 import "./CSS/Filterbar.css";
 import Axios from "axios";
-import {
-  withStyles,
-  createTheme,
-  ThemeProvider,
-  useMediaQuery,
-  Divider,
-  Slider,
-  Button,
-  Checkbox,
-  FormControlLabel,
-  Tooltip,
-} from "@material-ui/core";
-import Rating from "@material-ui/lab/Rating";
+import { createTheme, ThemeProvider, useMediaQuery, Divider, Slider, Button, Checkbox, FormControlLabel, Tooltip } from '@mui/material';
+import Rating from "@mui/material/Rating";
 //icons
-import CloseIcon from "@material-ui/icons/Close";
-import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
-import PeopleIcon from "@material-ui/icons/People";
-import TrendingUpIcon from "@material-ui/icons/TrendingUp";
-import Favorite from "@material-ui/icons/Favorite";
-import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
+import CloseIcon from "@mui/icons-material/Close";
+import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
+import PeopleIcon from "@mui/icons-material/People";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import Favorite from "@mui/icons-material/Favorite";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import { withStyles } from '@mui/styles';
 
 const Filterbar = ({ d }) => {
   const theme = createTheme({

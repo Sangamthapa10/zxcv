@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import DateRange from "../DatePicker/components/DateRange/index.js";
-import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { useGlobalContext } from "../Context";
 import { useParams, useHistory } from "react-router-dom";
-import { Button, Modal, useMediaQuery } from "@material-ui/core";
-import SaveIcon from "@material-ui/icons/Save";
+import { Button, Modal, useMediaQuery } from "@mui/material";
+import SaveIcon from "@mui/icons-material/Save";
 
 const ModalDatePicker = ({ start, end, booking_details }) => {
   const matches = useMediaQuery("(max-width:600px)");

@@ -1,7 +1,7 @@
 import React from "react";
 import "./CSS/Guestwidget.css";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
-import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import { useGlobalContext } from "./Context";
 function GuestRoomCount({ type }) {
   const {

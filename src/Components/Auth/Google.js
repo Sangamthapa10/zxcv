@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button } from "@material-ui/core";
+import { TextField, Button } from "@mui/material";
 import Customaxios from "../Axios";
 import Otp from "./OTP";
-import Alert from "@material-ui/lab/Alert";
+import Alert from "@mui/material/Alert";
 
 import GoogleIcon from "../CustomIcons/GoogleIcon";
 import { useGlobalContext } from "../Context";
-import Facebook from "@material-ui/icons/Facebook";
+import Facebook from "@mui/icons-material/Facebook";
 const Google = ({ data, type }) => {
   const { otp, setlogin } = useGlobalContext();
   const initialRegisterData = Object.freeze({

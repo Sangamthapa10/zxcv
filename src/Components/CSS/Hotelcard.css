@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap');
+
 .home_page_body {
   display: grid;
   margin-top: 1vw;
@@ -29,15 +31,14 @@
 .card_img {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
-  position: relative;
+  border-radius: 18px;
+  display: block;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 
-.fav_icon {
-  position: absolute;
-  top: 0;
-  right: 0;
+.hotel_card:hover .card_img {
+  transform: scale(1.06);
 }
 
 .amneties {
@@ -54,11 +55,17 @@
 .rating {
   display: flex;
   align-items: center;
+  gap: 4px;
+  margin: 2px 0;
 }
 
 .star_rating {
   display: flex;
   align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #8a8078;
+  font-family: 'Outfit', sans-serif;
 }
 
 .small_rating {
@@ -67,12 +74,91 @@
 
 .card_img_container {
   position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  background: #f0ece6;
+}
+
+.hotel_card:hover .card_img_container {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+  transform: translateY(-5px);
+}
+
+.card_img_container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 45%, rgba(10,8,6,0.55) 100%);
+  border-radius: 18px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .fav_icon {
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 12;
+  margin: 0 !important;
+}
+
+.fav_icon .MuiCheckbox-root {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  padding: 6px;
+  transition: background 0.25s;
+}
+
+.fav_icon .MuiCheckbox-root:hover {
+  background: rgba(255,255,255,0.32);
+}
+
+.card_price_overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 12;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  padding: 4px 12px 4px 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.card_price_overlay .price_head {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+}
+
+.card_price_overlay .price_bottom {
+  font-size: 10px;
+  color: rgba(255,255,255,0.82);
+  font-weight: 400;
+  padding: 0 !important;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.loadingcard {
+  border-radius: 18px;
+  background: linear-gradient(110deg, #ece8e1 30%, #f5f2ee 50%, #ece8e1 70%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .liked_icon {
@@ -84,18 +170,35 @@
 }
 
 .hotel_name {
-  font-size: 20px;
-  color: var(--black);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
   font-weight: 700;
-  margin: 0 5px 0 0;
+  color: #1a1714;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.01em;
 }
 
 .hotel_address {
-  font-size: 16px;
-  color: var(--black);
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8a8078;
+  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.card_desc_container {
+  padding: 10px 2px 6px;
+  display: grid;
+  gap: 2px;
 }
 
 .price_head {
@@ -116,15 +219,23 @@
   display: none;
 }
 
+.small_price_layout .price_head,
+.small_price_layout .price_bottom,
+.small_price_layout .price_bottom_small {
+  display: none;
+}
+
 .mob_arrow {
   display: none;
 }
 
 .hotel_card {
   display: grid !important;
-  grid-template-rows: 160px max-content;
+  grid-template-rows: 210px max-content;
   grid-template-columns: 90%;
   place-content: center;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
 }
 
 .tour_banner {
@@ -152,13 +263,25 @@
   }
 
   .hotel_card {
-    grid-template-rows: 128px max-content;
+    grid-template-rows: 160px max-content;
+  }
+
+  .card_img_container {
+    border-radius: 14px;
+  }
+
+  .card_img {
+    border-radius: 14px;
+  }
+
+  .card_img_container::after {
+    border-radius: 14px;
   }
 
   .fav_icon {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6px;
+    right: 6px;
   }
 
   .arrownext,
@@ -205,6 +328,24 @@
 
   .small_price_layout {
     display: flex;
+  }
+
+  .card_price_overlay {
+    bottom: 8px;
+    left: 8px;
+    padding: 3px 10px 3px 8px;
+  }
+
+  .card_price_overlay .price_head {
+    font-size: 13px;
+  }
+
+  .hotel_name {
+    font-size: 15px;
+  }
+
+  .hotel_address {
+    font-size: 11px;
   }
 
   .fab_arrow {

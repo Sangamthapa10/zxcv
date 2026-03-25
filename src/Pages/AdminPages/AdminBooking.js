@@ -19,12 +19,12 @@ import {
   TableHead,
   useMediaQuery,
   TableRow,
-} from "@material-ui/core";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+} from "@mui/material";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./CSS/AdminBooking.css";
 import NoBookingsvg from "../../Components/SvgComponents/NoBookingsvg";
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
-import FaceIcon from "@material-ui/icons/Face";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import FaceIcon from "@mui/icons-material/Face";
 
 function AdminBooking() {
   const {

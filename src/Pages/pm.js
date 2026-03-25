@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Authaxios from "../Components/Axios";
-import {Button,Dialog,DialogActions,DialogContent,DialogContentText} from "@material-ui/core";
+import {Button,Dialog,DialogActions,DialogContent,DialogContentText} from "@mui/material";
 const Pm = () => {
   const [open, setOpen] = useState(false);
 

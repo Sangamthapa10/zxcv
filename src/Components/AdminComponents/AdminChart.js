@@ -14,7 +14,7 @@ import {
   Cell,
 } from "recharts";
 import "./CSS/AdminNav.css";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material";
 const getPath = (x, y, width, height) => `M${x},${y + height}
           C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${
   x + width / 2

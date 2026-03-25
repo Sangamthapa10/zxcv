@@ -1,8 +1,8 @@
 import React from "react";
 import { useGlobalContext } from "../Context";
 // import "../Pages/CSS/Searchpage.css";
-import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
-import { Button } from "@material-ui/core";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import { Button } from "@mui/material";
 
 const SearchMap = () => {
   const { maplat, maplon, setsearchbymap } = useGlobalContext();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Modal from "@material-ui/core/Modal";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import Modal from "@mui/material/Modal";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import DateRange from "../DatePicker/components/DateRange/index.js";
 import { useGlobalContext } from "../Context";
 import "./CSS/modaldetepicker.css";

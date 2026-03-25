@@ -1,6 +1,6 @@
 import React from "react";
-import {Snackbar} from "@material-ui/core";
-import MuiAlert from "@material-ui/lab/Alert";
+import {Snackbar} from "@mui/material";
+import MuiAlert from "@mui/material/Alert";
 import { useGlobalContext } from "./Context";
 
 function Alert(props) {

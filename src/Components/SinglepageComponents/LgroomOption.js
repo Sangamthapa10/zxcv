@@ -5,10 +5,10 @@ import { useParams, useHistory } from "react-router-dom";
 import { useGlobalContext } from "../Context";
 import Customaxios from "../Axios";
 //mui
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 //icons
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import ImageIcon from "@material-ui/icons/Image";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import ImageIcon from "@mui/icons-material/Image";
 const LgroomOption = ({ roomselect }) => {
   const { id } = useParams();
   const { name } = useParams();

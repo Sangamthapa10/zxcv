@@ -5,9 +5,9 @@ import ImageModal from "./ImageModal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 //material ui
-import { Modal, Tab, AppBar, Tabs } from "@material-ui/core";
+import { Modal, Tab, AppBar, Tabs } from "@mui/material";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Imggallery = () => {
   const mapbar = useRef();
   const gallery_room_ref = useRef();

@@ -1,7 +1,7 @@
 import React from "react";
 import Lostsvg from "../Components/SvgComponents/Lostsvg";
 import { useHistory } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 function Errorpage() {
   const history = useHistory();
   return (

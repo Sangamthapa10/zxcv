@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./CSS/AdminPropertyimage.css";
 import { Authaxios } from "../../Axios";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { useGlobalContext } from "../../Context";
 import Axios from "axios";
 //icons
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 function APropertyImages() {
   const { setmailtext, setadminimg, setmailmodal } = useGlobalContext();
