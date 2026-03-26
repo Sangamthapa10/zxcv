@@ -108,12 +108,7 @@ const Smnav = () => {
     setlat(position.coords.latitude);
     setlon(position.coords.longitude);
     history.push(
-      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=${
-        position.coords.latitude
-      }/longitude=${
-        position.coords.longitude
-      }/filter=/type=/guest_rating=/order=`
+      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
     );
   }
   function showErrorl(error) {
@@ -139,14 +134,12 @@ const Smnav = () => {
       case error.PERMISSION_DENIED:
         alert("User denied the request for Geolocation.");
         history.push(
-          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
+          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
         );
         break;
       default:
         history.push(
-          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
+          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
         );
     }
   }
@@ -164,8 +157,7 @@ const Smnav = () => {
     setlat(position.coords.latitude);
     setlon(position.coords.longitude);
     history.push(
-      `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
+      `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
     );
   }
   const searchpage = (e) => {

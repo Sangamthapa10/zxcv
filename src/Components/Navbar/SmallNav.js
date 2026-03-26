@@ -144,11 +144,7 @@ function SmallNav() {
   function showPositionnearby(position) {
     setlat(position.coords.latitude);
     setlon(position.coords.longitude);
-    let urls = `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${
-      position.coords.latitude
-    }/longitude=${
-      position.coords.longitude
-    }/filter=/type=/guest_rating=/order=`;
+    let urls = `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`;
     history.push(urls.trim());
     setloading(false);
   }

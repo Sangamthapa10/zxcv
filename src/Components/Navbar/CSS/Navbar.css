@@ -7,7 +7,6 @@
   display: grid;
   background: linear-gradient(165deg, #f8f6f3 0%, #f0ece6 40%, #e8e2d9 100%);
   position: relative;
-  overflow: hidden;
 }
 
 .big_nav_top {
@@ -128,7 +127,6 @@
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  overflow: hidden;
 }
 
 .header_logo {

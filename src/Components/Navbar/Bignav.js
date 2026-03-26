@@ -100,12 +100,7 @@ function BigNavbar() {
     setlat(position.coords.latitude);
     setlon(position.coords.longitude);
     history.push(
-      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=${
-        position.coords.latitude
-      }/longitude=${
-        position.coords.longitude
-      }/filter=/type=/guest_rating=/order=`
+      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
     );
     setloading(false);
   }
@@ -135,8 +130,7 @@ function BigNavbar() {
   };
   function showError(error) {
     history.push(
-      `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
+      `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
     );
 
     setloading(false);

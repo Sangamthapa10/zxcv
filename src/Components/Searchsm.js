@@ -124,12 +124,7 @@ const Searchsm = () => {
     setlat(position.coords.latitude);
     setlon(position.coords.longitude);
     history.push(
-      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=${
-        position.coords.latitude
-      }/longitude=${
-        position.coords.longitude
-      }/filter=/type=/guest_rating=/order=`
+      `/search/${"nearby"}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
     );
     setdatemodal(false);
   }
@@ -178,19 +173,13 @@ const Searchsm = () => {
         alert("User denied the request for Geolocation.");
         setdatemodal(false);
         history.push(
-          removeSpaces(
-            `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
-          )
+          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
         );
         break;
       default:
         setdatemodal(false);
         history.push(
-          removeSpaces(
-            `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
-          )
+          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
         );
     }
   }
@@ -220,10 +209,7 @@ const Searchsm = () => {
     }
 
     history.push(
-      removeSpaces(
-        `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
-      )
+      `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=${position.coords.latitude}/longitude=${position.coords.longitude}/filter=/type=/guest_rating=/order=`
     );
     setdatemodal(false);
   }
@@ -236,10 +222,7 @@ const Searchsm = () => {
       );
     } else {
       history.push(
-        removeSpaces(
-          `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}
-      /guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
-        )
+        `/search/${inputvalue}/checkin=${checkin_date}/checkout=${checkout_date}/guest=${guestcount}/room=${roomcount}/latitude=/longitude=/filter=/type=/guest_rating=/order=`
       );
       setdatemodal(false);
     }
